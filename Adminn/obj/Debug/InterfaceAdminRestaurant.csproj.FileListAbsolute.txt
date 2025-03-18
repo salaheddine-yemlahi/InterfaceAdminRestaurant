@@ -112,3 +112,5 @@ C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\De
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\Interfac.1F6911C5.Up2Date
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\Adminn.exe
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\Adminn.pdb
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\Inscription.g.cs
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\Inscription.baml

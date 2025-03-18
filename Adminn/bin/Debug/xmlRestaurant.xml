@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRestaurant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Restaurant>
+    <nomRestaurant>salah</nomRestaurant>
+    <adresse>salah</adresse>
+    <numeroGSM>salah</numeroGSM>
+    <propretaire>salah</propretaire>
+    <motDePasse>salah</motDePasse>
+  </Restaurant>
+  <Restaurant>
+    <nomRestaurant>ilyas</nomRestaurant>
+    <adresse>ilyas</adresse>
+    <numeroGSM>ilyas</numeroGSM>
+    <propretaire>ilyas</propretaire>
+    <motDePasse>ilyas</motDePasse>
+  </Restaurant>
+  <Restaurant>
+    <nomRestaurant>salah</nomRestaurant>
+    <adresse>sasa</adresse>
+    <numeroGSM>sss</numeroGSM>
+    <propretaire>qqq</propretaire>
+    <motDePasse>sss</motDePasse>
+  </Restaurant>
+</ArrayOfRestaurant>

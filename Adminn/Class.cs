@@ -254,10 +254,8 @@ namespace InterfaceAdminRestaurant
 
    public class Restaurant
    {
-        private static string cheminFichier = "xmlRestaurant";
-        private static int compteurRestaurant = 0;
-        public int idRestaurant { get; }
-        public string nomRestaurant { get; private set; }
+        private static string cheminFichier = "xmlRestaurant.xml";
+        public string nomRestaurant { get; set; }
         public string adresse {  get; set; }
         public string numeroGSM { get; set; }
         public string propretaire {  get; set; }
@@ -265,28 +263,27 @@ namespace InterfaceAdminRestaurant
 
         public Restaurant(string nomRestaurant, string adresse, string numeroGSM, string propretaire, string motDePasse)
         {
-            this.idRestaurant = ++compteurRestaurant;
-            if( nomRestaurant != null )
+            if( nomRestaurant == null )
             {
                 throw new IdentificationException("le nom doit pas étre null.");
             }
             this.nomRestaurant= nomRestaurant;
-            if( adresse != null)
+            if( adresse == null)
             {
                 throw new IdentificationException("l'adresse doit pas étre null.");
             }
             this.adresse = adresse;
-            if( numeroGSM != null)
+            if( numeroGSM == null)
             {
                 throw new IdentificationException("le numero doit pas étre null.");
             }
             this.numeroGSM = numeroGSM;
-            if( propretaire != null)
+            if( propretaire == null)
             {
                 throw new IdentificationException("le propriètaire doit pas étre null.");
             }
             this.propretaire = propretaire;
-            if( motDePasse != null)
+            if( motDePasse == null)
             {
                 throw new IdentificationException("le mot de passe doit pas étre null.");
             }
@@ -306,15 +303,26 @@ namespace InterfaceAdminRestaurant
                 return (List<Restaurant>)serializer.Deserialize(reader);
             }
         }
-        public void EnregistrerRestaurent()
+        public bool EnregistrerRestaurent()
         {
-            List<Restaurant> utilisateurs = ChargerRestaurants();
-            utilisateurs.Add(this);
+            List<Restaurant> restaurants = ChargerRestaurants();
+
+            foreach (Restaurant restaurant in restaurants)
+            {
+                if (restaurant.nomRestaurant == nomRestaurant)
+                {
+                    return false;
+                }
+            }
+
+            restaurants.Add(this);
+
             XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
             using (StreamWriter writer = new StreamWriter(cheminFichier))
             {
-                serializer.Serialize(writer, utilisateurs);
+                serializer.Serialize(writer, restaurants);
             }
+            return true;
         }
 
         public static bool VerifierRestaurant(string nomRestaurant, string motDePasse)

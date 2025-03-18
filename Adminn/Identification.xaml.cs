@@ -26,6 +26,12 @@ namespace InterfaceAdminRestaurant
             InitializeComponent();
         }
 
+        private void GoForSignin(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForSigninInterface(sender, e);
+        }
+
 
         public void Login(object sender, RoutedEventArgs e)
         {
