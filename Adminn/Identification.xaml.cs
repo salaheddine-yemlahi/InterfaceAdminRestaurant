@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InterfaceAdminRestaurant;
 
 namespace InterfaceAdminRestaurant
 {
@@ -24,9 +25,23 @@ namespace InterfaceAdminRestaurant
         {
             InitializeComponent();
         }
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
+
+        public void Login(object sender, RoutedEventArgs e)
+        {
+            string nomRestaurant = NomRestaurantTextBox.Text;
+            string motDePasse = MotDePasseTextBox.Text;
+            bool verifie = Restaurant.VerifierRestaurant(nomRestaurant, motDePasse);
+            if (verifie)
+            {
+                MessageBox.Show("accès autoriser.");
+            }
+            else
+            {
+                MessageBox.Show("vérifiez vos informations.");
+            }
         }
+
+
     }
 }

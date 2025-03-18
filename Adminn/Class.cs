@@ -247,4 +247,93 @@ namespace InterfaceAdminRestaurant
 
 
     }
+
+
+
+
+
+   public class Restaurant
+   {
+        private static string cheminFichier = "xmlRestaurant";
+        private static int compteurRestaurant = 0;
+        public int idRestaurant { get; }
+        public string nomRestaurant { get; private set; }
+        public string adresse {  get; set; }
+        public string numeroGSM { get; set; }
+        public string propretaire {  get; set; }
+        public string motDePasse { get; set; } // il faut ajouter un hashage aprés.
+
+        public Restaurant(string nomRestaurant, string adresse, string numeroGSM, string propretaire, string motDePasse)
+        {
+            this.idRestaurant = ++compteurRestaurant;
+            if( nomRestaurant != null )
+            {
+                throw new IdentificationException("le nom doit pas étre null.");
+            }
+            this.nomRestaurant= nomRestaurant;
+            if( adresse != null)
+            {
+                throw new IdentificationException("l'adresse doit pas étre null.");
+            }
+            this.adresse = adresse;
+            if( numeroGSM != null)
+            {
+                throw new IdentificationException("le numero doit pas étre null.");
+            }
+            this.numeroGSM = numeroGSM;
+            if( propretaire != null)
+            {
+                throw new IdentificationException("le propriètaire doit pas étre null.");
+            }
+            this.propretaire = propretaire;
+            if( motDePasse != null)
+            {
+                throw new IdentificationException("le mot de passe doit pas étre null.");
+            }
+            this.motDePasse = motDePasse;
+        }
+        public Restaurant() { }
+
+
+        private static List<Restaurant> ChargerRestaurants()
+        {
+            if (!File.Exists(cheminFichier))
+                return new List<Restaurant>();
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
+            using (StreamReader reader = new StreamReader(cheminFichier))
+            {
+                return (List<Restaurant>)serializer.Deserialize(reader);
+            }
+        }
+        public void EnregistrerRestaurent()
+        {
+            List<Restaurant> utilisateurs = ChargerRestaurants();
+            utilisateurs.Add(this);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
+            using (StreamWriter writer = new StreamWriter(cheminFichier))
+            {
+                serializer.Serialize(writer, utilisateurs);
+            }
+        }
+
+        public static bool VerifierRestaurant(string nomRestaurant, string motDePasse)
+        {
+            List<Restaurant> restaurants = ChargerRestaurants();
+            if (restaurants == null)  return false;
+            foreach (Restaurant restaurant in restaurants)
+            {
+                if(restaurant.nomRestaurant == nomRestaurant && restaurant.motDePasse == motDePasse)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+    }
+
+
+
 }

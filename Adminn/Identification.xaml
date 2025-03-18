@@ -45,8 +45,7 @@
                 <TextBox x:Name="NomRestaurantTextBox" Grid.Row="1"
                          HorizontalAlignment="Stretch" VerticalAlignment="Top"
                          Margin="10,40,10,0"
-                         Background="#FFE1DDDD" Height="29"
-                         TextChanged="TextBox_TextChanged"/>
+                         Background="#FFE1DDDD" Height="29"/>
 
                 <Label Content="Mot de passe"
                        Grid.Row="2"
@@ -58,7 +57,7 @@
                          Background="#FFE1DDDD" Height="29"/>
 
                 <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                    <Button Content="LOGIN" Width="100" Height="30" Background="#FF00FF27" Margin="10"/>
+                    <Button Content="LOGIN" Width="100" Height="30" Background="#FF00FF27" Margin="10"  Click="Login"/>
                     <Button Content="LOGOUT" Width="100" Height="30" Background="Red" Margin="10"/>
                 </StackPanel>
             </Grid>

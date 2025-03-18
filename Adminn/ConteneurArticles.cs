@@ -84,10 +84,10 @@ namespace InterfaceAdminRestaurant
         }
 
         // ✅ Récupérer un article par ID
-        /*public Article? ObtenirArticleParId(int id)
+        /*public Article ObtenirArticleParId(int id)
         {
-            return Nouritures.FirstOrDefault(n => n.NumeroArticle == id) ??
-                   Boissons.FirstOrDefault(b => b.NumeroArticle == id) ??
+            return Nouritures.FirstOrDefault(n => n.NumeroArticle == id)
+                   Boissons.FirstOrDefault(b => b.NumeroArticle == id)
                    Frites.FirstOrDefault(f => f.NumeroArticle == id);
         }*/
 
