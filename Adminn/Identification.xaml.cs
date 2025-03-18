@@ -40,7 +40,7 @@ namespace InterfaceAdminRestaurant
             bool verifie = Restaurant.VerifierRestaurant(nomRestaurant, motDePasse);
             if (verifie)
             {
-                MessageBox.Show("accès autoriser.");
+                MessageBox.Show("accès autoriser, bienvenue encore.");
             }
             else
             {

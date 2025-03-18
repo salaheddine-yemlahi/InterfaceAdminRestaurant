@@ -5,20 +5,6 @@
     <adresse>salah</adresse>
     <numeroGSM>salah</numeroGSM>
     <propretaire>salah</propretaire>
-    <motDePasse>salah</motDePasse>
-  </Restaurant>
-  <Restaurant>
-    <nomRestaurant>ilyas</nomRestaurant>
-    <adresse>ilyas</adresse>
-    <numeroGSM>ilyas</numeroGSM>
-    <propretaire>ilyas</propretaire>
-    <motDePasse>ilyas</motDePasse>
-  </Restaurant>
-  <Restaurant>
-    <nomRestaurant>salah</nomRestaurant>
-    <adresse>sasa</adresse>
-    <numeroGSM>sss</numeroGSM>
-    <propretaire>qqq</propretaire>
-    <motDePasse>sss</motDePasse>
+    <motDePasse>$2a$11$QOLIohUfnJkmqiL.uMMylOkL65yMVOKBmcnZBZHKcPI7suv843FwO</motDePasse>
   </Restaurant>
 </ArrayOfRestaurant>

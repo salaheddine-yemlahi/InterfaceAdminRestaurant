@@ -315,6 +315,8 @@ namespace InterfaceAdminRestaurant
                 }
             }
 
+            this.motDePasse = Restaurant.HashPassword(this.motDePasse);
+
             restaurants.Add(this);
 
             XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
@@ -331,12 +333,23 @@ namespace InterfaceAdminRestaurant
             if (restaurants == null)  return false;
             foreach (Restaurant restaurant in restaurants)
             {
-                if(restaurant.nomRestaurant == nomRestaurant && restaurant.motDePasse == motDePasse)
+                bool ver = Restaurant.VerifyPassword(motDePasse ,restaurant.motDePasse);
+                if (restaurant.nomRestaurant == nomRestaurant && ver == true)
                 {
                     return true;
                 }
             }
             return false;
+        }
+
+        public static string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        public static bool VerifyPassword(string password, string hashedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }
 
 
