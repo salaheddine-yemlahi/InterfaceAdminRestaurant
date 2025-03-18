@@ -1,0 +1,67 @@
+﻿<Page x:Class="InterfaceAdminRestaurant.Identification"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InterfaceAdminRestaurant"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Identification">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="Black"/>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="connectez-vous ou bien inscrivez-vous si vous étes un &#xA;nouveau restaurant."
+                       Grid.Row="0"
+                       HorizontalAlignment="Center" VerticalAlignment="Top"
+                       FontSize="18" Margin="10"/>
+
+                <Label Content="Nom du restaurant"
+                       Grid.Row="1"
+                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontSize="16" Margin="10,10,0,0"/>
+                <TextBox x:Name="NomRestaurantTextBox" Grid.Row="1"
+                         HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                         Margin="10,40,10,0"
+                         Background="#FFE1DDDD" Height="29"
+                         TextChanged="TextBox_TextChanged"/>
+
+                <Label Content="Mot de passe"
+                       Grid.Row="2"
+                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontSize="16" Margin="10,10,0,0"/>
+                <TextBox x:Name="MotDePasseTextBox" Grid.Row="2"
+                         HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                         Margin="10,40,10,0"
+                         Background="#FFE1DDDD" Height="29"/>
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button Content="LOGIN" Width="100" Height="30" Background="#FF00FF27" Margin="10"/>
+                    <Button Content="LOGOUT" Width="100" Height="30" Background="Red" Margin="10"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
