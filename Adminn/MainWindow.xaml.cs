@@ -23,16 +23,17 @@ namespace InterfaceAdminRestaurant
             InitializeComponent();
             MainFrame.Navigate(new Identification());
         }
-
         public void GoForSigninInterface(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Inscription());
         }
-
         public void GoForLogInInterface(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Identification());
         }
-
+        public void GoForInterfaceBurger(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceBurgers());
+        }
     }
 }

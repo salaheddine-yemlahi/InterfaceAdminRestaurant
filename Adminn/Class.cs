@@ -12,7 +12,7 @@ namespace InterfaceAdminRestaurant
         public int NumeroArticle { get; }
         public string Nom { get; set; }
         public decimal Prix { get; set; }
-        public byte[] image { get; set; }
+        public string cheminImage { get; set; }
         public bool disponibilte { get; set; } = true; // true : disponible, false : non disponible.
 
         public Article(string nom, decimal prix, string cheminImage, bool disponibilte)
@@ -23,19 +23,19 @@ namespace InterfaceAdminRestaurant
             if (prix < 0)
                 throw new ArticleException("Le prix doit être supérieur à zéro.");
 
-            if (image == null || image.Length == 0)
+            if (cheminImage == null || cheminImage.Length == 0)
                 throw new ArticleException("L'image ne doit pas être vide.");
 
             this.Nom = nom;
             this.Prix = prix;
-            this.image = image;
+            this.cheminImage = cheminImage;
             this.disponibilte = disponibilte;
             NumeroArticle = ++compteurArticle;
         }
 
         public override string ToString()
         {
-            return $"Numéro: {NumeroArticle}, Nom: {Nom}, Prix: {Prix} euros, Disponible: {(disponibilte ? "Oui" : "Non")}";
+            return $"{Nom} - {Prix}€";
         }
     }
 

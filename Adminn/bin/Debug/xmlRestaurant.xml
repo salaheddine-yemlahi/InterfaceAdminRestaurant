@@ -7,4 +7,11 @@
     <propretaire>salah</propretaire>
     <motDePasse>$2a$11$QOLIohUfnJkmqiL.uMMylOkL65yMVOKBmcnZBZHKcPI7suv843FwO</motDePasse>
   </Restaurant>
+  <Restaurant>
+    <nomRestaurant>nassim</nomRestaurant>
+    <adresse>nassim</adresse>
+    <numeroGSM>nassim</numeroGSM>
+    <propretaire>nassim</propretaire>
+    <motDePasse>$2a$11$K3h.iBGqfyPnivds.iGrKumP3WIZEDjczfXz1cQ7h42ztV3Ixtd5K</motDePasse>
+  </Restaurant>
 </ArrayOfRestaurant>

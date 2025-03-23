@@ -97,6 +97,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceBurgers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -113,6 +117,9 @@
     </Compile>
     <Compile Include="Inscription.xaml.cs">
       <DependentUpon>Inscription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceBurgers.xaml.cs">
+      <DependentUpon>InterfaceBurgers.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

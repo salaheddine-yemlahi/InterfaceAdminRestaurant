@@ -8,6 +8,7 @@ namespace InterfaceAdminRestaurant
 {
     public class Conteneur
     {
+        private static string cheminJSon = "chemiJson.json";
         private static Conteneur _instance = new Conteneur();
         public static Conteneur Instance => _instance;
 
@@ -129,12 +130,12 @@ namespace InterfaceAdminRestaurant
         }
 
 
-        public void SauvegarderJson(string cheminFichier)
+        public void SauvegarderJson()
         {
             try
             {
                 string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(cheminFichier, json);
+                File.WriteAllText(cheminJSon, json);
             }
             catch (Exception e)
             {
@@ -143,17 +144,17 @@ namespace InterfaceAdminRestaurant
         }
 
 
-        public void ChargerJson(string cheminFichier)
+        public void ChargerJson()
         {
             try
             {
-                if (!File.Exists(cheminFichier))
+                if (!File.Exists(cheminJSon))
                 {
                     Console.WriteLine("Le fichier spécifié n'existe pas.");
                     return;
                 }
 
-                string json = File.ReadAllText(cheminFichier);
+                string json = File.ReadAllText(cheminJSon);
                 var conteneur = JsonSerializer.Deserialize<Conteneur>(json);
 
                 if (conteneur != null)
