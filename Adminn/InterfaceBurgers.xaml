@@ -25,7 +25,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Content="Burgers" Background="BlanchedAlmond"  Margin="70,18,70,18" Click="Button_Click_1"/>
+                <Button Grid.Row="0" Content="Burgers" Background="BlanchedAlmond"  Margin="70,18,70,18"/>
                 <Button Grid.Row="1" Content="Boissons" Background="White"  Margin="70,18,70,18"  />
                 <Button Grid.Row="2" Content="Frites" Background="White"  Margin="70,18,70,18"/>
                 <Button Grid.Row="3" Content="Commandes" Background="White"  Margin="70,18,70,18"/>
@@ -38,7 +38,11 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Content="Ajouter un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="Button_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <Button Content="Supprimer un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="RemoveBurger"/>
+                    <Button Content="Modifier un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="EditBurger"/>
+                    <Button Content="Ajouter un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="AddNewBurger"/>
+                </StackPanel>
                 <Grid Grid.Row="1">
                     <ListBox x:Name="BurgersListBox" BorderThickness="0">
                         <ListBox.ItemsPanel>
@@ -49,16 +53,14 @@
 
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Border BorderBrush="Gray">
+                                <Border BorderBrush="Gray" MaxWidth="150" MaxHeight="250" Margin="5">
                                     <StackPanel>
-                                        <Image Source="{Binding cheminImage}" Width="150" Height="100" Margin="5"/>
-                                        <TextBlock Text="{Binding Nom}" FontWeight="Bold" FontSize="14" TextAlignment="Center"/>
-                                        <TextBlock Text="{Binding NumeroArticle}" FontWeight="Bold" FontSize="14" TextAlignment="Center"/>
-                                        <TextBlock Text="{Binding Prix, StringFormat='Prix: {0:C}'}" Foreground="Green" FontSize="12" TextAlignment="Center"/>
-                                        <TextBlock Text="{Binding Taille, StringFormat='Taille : {0}'}" FontSize="12" TextAlignment="Center"/>
-
-                                        <!-- Ajout du label "Végétarienne" si EstVegetarienne est True -->
-                                        <TextBlock FontSize="12" TextAlignment="Center" Foreground="Green">
+                                        <Image Source="{Binding cheminImage}" Width="120" Height="80" Margin="5"/>
+                                        <TextBlock Text="{Binding Nom}" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="0,5"/>
+                                        <TextBlock Text="{Binding NumeroArticle}" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="0,5"/>
+                                        <TextBlock Text="{Binding Prix, StringFormat='Prix: {0:C}'}" Foreground="Green" FontSize="10" TextAlignment="Center" Margin="0,5"/>
+                                        <TextBlock Text="{Binding Taille, StringFormat='Taille : {0}'}" FontSize="10" TextAlignment="Center" Margin="0,5"/>
+                                        <TextBlock FontSize="10" TextAlignment="Center" Foreground="Green" Margin="0,5">
                                             <TextBlock.Style>
                                                 <Style TargetType="TextBlock">
                                                     <Setter Property="Text" Value=""/>
@@ -70,11 +72,6 @@
                                                 </Style>
                                             </TextBlock.Style>
                                         </TextBlock>
-
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                                            <Button Content="Modifier" Padding="5" Margin="5"/>
-                                            <Button Content="Supprimer" Padding="5" Margin="5"/>
-                                        </StackPanel>
                                     </StackPanel>
                                 </Border>
                             </DataTemplate>

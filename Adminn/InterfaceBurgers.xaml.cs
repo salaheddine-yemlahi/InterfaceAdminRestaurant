@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InterfaceAdminRestaurant;
+using Microsoft.VisualBasic;
 
 namespace Adminn
 {
@@ -21,43 +23,51 @@ namespace Adminn
     /// </summary>
     public partial class InterfaceBurgers : Page
     {
+        public static bool edit = false;
         public InterfaceBurgers()
         {
             InitializeComponent();
             DataContext = this;
-            /*Conteneur.Instance.ChargerJson();
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            ArticlesListBox.Items.Clear();
+            BurgersListBox.Items.Clear();
             foreach (var article in articles)
-            {
-                ArticlesListBox.Items.Add(article);
-            }*/
-            List<Nouriture> list = new List<Nouriture>();
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', false, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", false));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', false, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", false));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            list.Add(new Nouriture("Cheeseburge", 5, 'M', true, "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png", true));
-            foreach (var article in list)
             {
                 BurgersListBox.Items.Add(article);
             }
-
-
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void EditBurger(object sender, RoutedEventArgs e)
         {
-
+            InterfaceBurgers.edit = true;
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceAddBurger(sender, e);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void RemoveBurger(object sender, RoutedEventArgs e)
         {
+            AskIdWindow askIdWindow = new AskIdWindow();
+            bool? result = askIdWindow.ShowDialog();
 
+            if (result == true)
+            {
+                string idString = askIdWindow.IdValue;
+                int id = int.Parse(idString);
+                Conteneur.Instance.SupprimerArticleById(id);
+                var mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.GoForInterfaceBurger(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("ID non fourni.");
+            }
         }
+
+        private void AddNewBurger(object sender, RoutedEventArgs e)
+        {
+            InterfaceBurgers.edit = false;
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceAddBurger(sender, e);
+        }
+
     }
 }

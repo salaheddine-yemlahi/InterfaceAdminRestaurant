@@ -3,68 +3,101 @@
   "WorkspaceRootPath": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfaceburgers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\interfaceburgers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\adminn\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\conteneurarticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\conteneurarticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedHeight": 317,
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\Class.cs",
               "RelativeDocumentMoniker": "Adminn\\Class.cs",
               "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\Class.cs",
               "RelativeToolTip": "Adminn\\Class.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwDwAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T00:37:57.275Z",
+              "WhenOpened": "2025-03-27T11:11:50.852Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConteneurArticles.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\ConteneurArticles.cs",
+              "RelativeDocumentMoniker": "Adminn\\ConteneurArticles.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\ConteneurArticles.cs",
+              "RelativeToolTip": "Adminn\\ConteneurArticles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T11:34:39.01Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InterfaceBurgers.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
-              "RelativeDocumentMoniker": "Adminn\\InterfaceBurgers.xaml.cs",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
-              "RelativeToolTip": "Adminn\\InterfaceBurgers.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAlwCcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T00:57:38.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "InterfaceBurgers.xaml",
               "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml",
               "RelativeDocumentMoniker": "Adminn\\InterfaceBurgers.xaml",
               "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml",
               "RelativeToolTip": "Adminn\\InterfaceBurgers.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T00:56:44.913Z",
+              "WhenOpened": "2025-03-27T13:29:20.797Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InterfaceBurgers.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
+              "RelativeDocumentMoniker": "Adminn\\InterfaceBurgers.xaml.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
+              "RelativeToolTip": "Adminn\\InterfaceBurgers.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAhwB8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T00:57:38.317Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 83,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

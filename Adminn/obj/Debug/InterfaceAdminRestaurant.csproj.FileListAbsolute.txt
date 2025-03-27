@@ -118,3 +118,7 @@ C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\De
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\BCrypt.Net-Next.xml
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceBurgers.g.cs
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceBurgers.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AddEditBurger.g.cs
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AddEditBurger.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AskIdWindow.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AskIdWindow.g.cs

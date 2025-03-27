@@ -1,0 +1,17 @@
+{
+  "Nouritures": [
+    {
+      "Taille": "L",
+      "EstVegetarienne": false,
+      "NumeroArticle": 1,
+      "Nom": "salah",
+      "Prix": 11,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\image.png",
+      "disponibilte": true
+    }
+  ],
+  "Boissons": [],
+  "Frites": [],
+  "Menus": [],
+  "Orders": []
+}

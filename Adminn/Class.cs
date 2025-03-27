@@ -13,7 +13,7 @@ namespace InterfaceAdminRestaurant
         public string Nom { get; set; }
         public decimal Prix { get; set; }
         public string cheminImage { get; set; }
-        public bool disponibilte { get; set; } = true; // true : disponible, false : non disponible.
+        public bool disponibilte { get; set; } = true;
 
         public Article(string nom, decimal prix, string cheminImage, bool disponibilte)
         {

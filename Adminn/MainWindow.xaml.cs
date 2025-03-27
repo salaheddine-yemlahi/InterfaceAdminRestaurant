@@ -22,6 +22,11 @@ namespace InterfaceAdminRestaurant
         {
             InitializeComponent();
             MainFrame.Navigate(new Identification());
+            Conteneur.Instance.ChargerJson();
+        }
+        ~MainWindow()
+        {
+            Conteneur.Instance.SauvegarderJson();
         }
         public void GoForSigninInterface(object sender, RoutedEventArgs e)
         {
@@ -34,6 +39,10 @@ namespace InterfaceAdminRestaurant
         public void GoForInterfaceBurger(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new InterfaceBurgers());
+        }
+        public void GoForInterfaceAddBurger(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AddEditBurger());
         }
     }
 }
