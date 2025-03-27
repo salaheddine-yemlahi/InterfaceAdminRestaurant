@@ -18,9 +18,6 @@ using Microsoft.VisualBasic;
 
 namespace Adminn
 {
-    /// <summary>
-    /// Interaction logic for InterfaceBurgers.xaml
-    /// </summary>
     public partial class InterfaceBurgers : Page
     {
         public static bool edit = false;

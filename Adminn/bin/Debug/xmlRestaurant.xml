@@ -14,4 +14,11 @@
     <propretaire>nassim</propretaire>
     <motDePasse>$2a$11$K3h.iBGqfyPnivds.iGrKumP3WIZEDjczfXz1cQ7h42ztV3Ixtd5K</motDePasse>
   </Restaurant>
+  <Restaurant>
+    <nomRestaurant>ilyas</nomRestaurant>
+    <adresse>ilyas</adresse>
+    <numeroGSM>0000000</numeroGSM>
+    <propretaire>ilyas</propretaire>
+    <motDePasse>$2a$11$Z1OmHcFmxbFh42IbS9.TwOqnvHO5ov.wLvVtvZkdVmR58Smfy6CzG</motDePasse>
+  </Restaurant>
 </ArrayOfRestaurant>

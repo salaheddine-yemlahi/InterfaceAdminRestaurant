@@ -28,14 +28,21 @@ namespace InterfaceAdminRestaurant
 
             this.Nom = nom;
             this.Prix = prix;
-            this.cheminImage = cheminImage;
+            if (cheminImage[1] == ':')
+            {
+                this.cheminImage = cheminImage;
+            }
+            else
+            {
+                this.cheminImage = "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\" + cheminImage;
+            }
             this.disponibilte = disponibilte;
             NumeroArticle = ++compteurArticle;
         }
 
         public override string ToString()
         {
-            return $"{Nom} - {Prix}€";
+            return $"{ Nom} - {Prix}€";
         }
     }
 

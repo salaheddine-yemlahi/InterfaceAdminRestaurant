@@ -39,9 +39,9 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                    <Button Content="Supprimer un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="RemoveBurger"/>
-                    <Button Content="Modifier un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="EditBurger"/>
-                    <Button Content="Ajouter un Burger" HorizontalAlignment="Right" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="175" Height="30" Click="AddNewBurger"/>
+                    <Button Content="Supprimer un Burger" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="RemoveBurger"/>
+                    <Button Content="Modifier un Burger" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="EditBurger"/>
+                    <Button Content="Ajouter un Burger" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="AddNewBurger"/>
                 </StackPanel>
                 <Grid Grid.Row="1">
                     <ListBox x:Name="BurgersListBox" BorderThickness="0">
