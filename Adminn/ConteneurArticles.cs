@@ -64,6 +64,9 @@ namespace InterfaceAdminRestaurant
             Nouritures.RemoveAll(n => n.NumeroArticle == id);
             Boissons.RemoveAll(b => b.NumeroArticle == id);
             Frites.RemoveAll(f => f.NumeroArticle == id);
+            Article.compteurArticle--;
+
+
 
 
             Menus.RemoveAll(m =>

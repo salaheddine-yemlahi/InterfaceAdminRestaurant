@@ -48,7 +48,7 @@ namespace Adminn
                 MessageBox.Show("Le prix saisi est invalide.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            Nouriture Burger = new Nouriture(BurgerNameTextBox.Text, price, size, VegitarienCheckBox.IsChecked == false, BurgerImagePathTextBox.Text, AvibilityCheckBox.IsChecked == true);
+            Nouriture Burger = new Nouriture(BurgerNameTextBox.Text, price, size, VegitarienCheckBox.IsChecked == true, BurgerImagePathTextBox.Text, AvibilityCheckBox.IsChecked == true);
             Conteneur.Instance.AjouterArticle(Burger);
             MessageBox.Show("le burger est ajouté.");
             var mainWindow = Application.Current.MainWindow as MainWindow;

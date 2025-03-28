@@ -98,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EditAddDrink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Identification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InterfaceBurgers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InterfaceDrinks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +134,9 @@
     </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="ConteneurArticles.cs" />
+    <Compile Include="EditAddDrink.xaml.cs">
+      <DependentUpon>EditAddDrink.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Exception.cs" />
     <Compile Include="Identification.xaml.cs">
       <DependentUpon>Identification.xaml</DependentUpon>
@@ -135,6 +146,9 @@
     </Compile>
     <Compile Include="InterfaceBurgers.xaml.cs">
       <DependentUpon>InterfaceBurgers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceDrinks.xaml.cs">
+      <DependentUpon>InterfaceDrinks.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

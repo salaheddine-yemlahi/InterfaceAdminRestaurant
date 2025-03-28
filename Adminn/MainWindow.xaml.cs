@@ -44,5 +44,13 @@ namespace InterfaceAdminRestaurant
         {
             MainFrame.Navigate(new AddEditBurger());
         }
+        public void GoForInterfaceDrinks(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceDrinks());
+        }
+        public void GoForInterfaceEditAddDrink(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new EditAddDrink());
+        }
     }
 }

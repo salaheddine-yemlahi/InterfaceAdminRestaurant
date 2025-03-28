@@ -51,10 +51,12 @@
                        Grid.Row="2"
                        HorizontalAlignment="Left" VerticalAlignment="Top"
                        FontSize="16" Margin="10,10,0,0"/>
-                <TextBox x:Name="MotDePasseTextBox" Grid.Row="2"
+                <PasswordBox  x:Name="MotDePasseTextBox" Grid.Row="2"
                          HorizontalAlignment="Stretch" VerticalAlignment="Top"
                          Margin="10,40,10,0"
                          Background="#FFE1DDDD" Height="29"/>
+                
+                
 
                 <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
                     <Button Content="LOGIN" Width="100" Height="30" Background="#FF00FF27" Margin="10"  Click="Login"/>

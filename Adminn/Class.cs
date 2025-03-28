@@ -8,7 +8,7 @@ namespace InterfaceAdminRestaurant
 {
     public class Article
     {
-        private static int compteurArticle = 0;
+        public static int compteurArticle = 0;
         public int NumeroArticle { get; }
         public string Nom { get; set; }
         public decimal Prix { get; set; }
@@ -34,7 +34,7 @@ namespace InterfaceAdminRestaurant
             }
             else
             {
-                this.cheminImage = "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\" + cheminImage;
+                this.cheminImage = "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\" + cheminImage + ".JPG";
             }
             this.disponibilte = disponibilte;
             NumeroArticle = ++compteurArticle;
@@ -96,21 +96,21 @@ namespace InterfaceAdminRestaurant
     public class Boisson : Article
     {
         public int Volume { get; set; }
-        public bool EstSucree { get; set; }
+        public bool EstNonSucree { get; set; }
 
-        public Boisson(string nom, decimal prix, int volume, bool estSucree, string cheminImage, bool disponibilte)
+        public Boisson(string nom, decimal prix, int volume, bool estNonSucree, string cheminImage, bool disponibilte)
             : base(nom, prix, cheminImage, disponibilte)
         {
             if (volume <= 0)
                 throw new BoissonException("Le volume de la boisson doit être supérieur à zéro.");
 
             this.Volume = volume;
-            this.EstSucree = estSucree;
+            this.EstNonSucree = estNonSucree;
         }
 
         public override string ToString()
         {
-            return base.ToString() + $", Volume: {Volume}ml, Sucrée: {(EstSucree ? "Oui" : "Non")}";
+            return base.ToString() + $", Volume: {Volume}ml, Sucrée: {(EstNonSucree ? "Oui" : "Non")}";
         }
     }
 

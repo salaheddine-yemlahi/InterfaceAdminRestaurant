@@ -2,15 +2,106 @@
   "Nouritures": [
     {
       "Taille": "L",
-      "EstVegetarienne": false,
+      "EstVegetarienne": true,
       "NumeroArticle": 1,
-      "Nom": "sazs",
-      "Prix": 12,
-      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\lekker.jpg",
+      "Nom": "Big Burger",
+      "Prix": 7.45,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
+      "disponibilte": true
+    },
+    {
+      "Taille": "M",
+      "EstVegetarienne": false,
+      "NumeroArticle": 2,
+      "Nom": "Black Burger",
+      "Prix": 8.50,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\black.JPG",
+      "disponibilte": true
+    },
+    {
+      "Taille": "M",
+      "EstVegetarienne": false,
+      "NumeroArticle": 3,
+      "Nom": "Classic Smashed",
+      "Prix": 11.25,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\ClassicSmashed.JPG",
+      "disponibilte": true
+    },
+    {
+      "Taille": "L",
+      "EstVegetarienne": true,
+      "NumeroArticle": 4,
+      "Nom": "Hut Burger",
+      "Prix": 10.25,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Hut.JPG",
+      "disponibilte": true
+    },
+    {
+      "Taille": "M",
+      "EstVegetarienne": true,
+      "NumeroArticle": 5,
+      "Nom": "Lekker Burger",
+      "Prix": 12.85,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\lekker.JPG",
+      "disponibilte": true
+    },
+    {
+      "Taille": "M",
+      "EstVegetarienne": true,
+      "NumeroArticle": 6,
+      "Nom": "Ultimate",
+      "Prix": 12.25,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Ultimate.JPG",
       "disponibilte": true
     }
   ],
-  "Boissons": [],
+  "Boissons": [
+    {
+      "Volume": 50,
+      "EstNonSucree": false,
+      "NumeroArticle": 7,
+      "Nom": "cola",
+      "Prix": 1.25,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
+      "disponibilte": true
+    },
+    {
+      "Volume": 50,
+      "EstNonSucree": false,
+      "NumeroArticle": 8,
+      "Nom": "Fanta",
+      "Prix": 1.45,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Fanta.JPG",
+      "disponibilte": true
+    },
+    {
+      "Volume": 45,
+      "EstNonSucree": false,
+      "NumeroArticle": 9,
+      "Nom": "Hawai",
+      "Prix": 1.35,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\hawai.JPG",
+      "disponibilte": true
+    },
+    {
+      "Volume": 100,
+      "EstNonSucree": false,
+      "NumeroArticle": 10,
+      "Nom": "Monster",
+      "Prix": 2.5,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Monster.JPG",
+      "disponibilte": true
+    },
+    {
+      "Volume": 75,
+      "EstNonSucree": false,
+      "NumeroArticle": 11,
+      "Nom": "Sprite",
+      "Prix": 1.20,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Sprite.JPG",
+      "disponibilte": true
+    }
+  ],
   "Frites": [],
   "Menus": [],
   "Orders": []

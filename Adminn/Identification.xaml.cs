@@ -36,7 +36,7 @@ namespace InterfaceAdminRestaurant
         public void Login(object sender, RoutedEventArgs e)
         {
             string nomRestaurant = NomRestaurantTextBox.Text;
-            string motDePasse = MotDePasseTextBox.Text;
+            string motDePasse = MotDePasseTextBox.Password;
             bool verifie = Restaurant.VerifierRestaurant(nomRestaurant, motDePasse);
             if (verifie)
             {

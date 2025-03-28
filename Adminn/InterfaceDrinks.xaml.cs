@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,33 +13,49 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InterfaceAdminRestaurant;
-using Microsoft.VisualBasic;
 
 namespace Adminn
 {
-    public partial class InterfaceBurgers : Page
+    /// <summary>
+    /// Interaction logic for InterfaceDrinks.xaml
+    /// </summary>
+    public partial class InterfaceDrinks : Page
     {
         public static bool edit = false;
-        public InterfaceBurgers()
+        public InterfaceDrinks()
         {
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
             BurgersListBox.Items.Clear();
-            foreach (Nouriture burger in articles.OfType<Nouriture>())
+
+            foreach (Boisson boisson in articles.OfType<Boisson>()) // Filtre seulement les Boissons
             {
-                BurgersListBox.Items.Add(burger);
+                BurgersListBox.Items.Add(boisson);
             }
         }
 
-        private void EditBurger(object sender, RoutedEventArgs e)
+        private void DrinkToBurger(object sender, RoutedEventArgs e)
         {
-            InterfaceBurgers.edit = true;
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
+            mainWindow.GoForInterfaceBurger(sender, e);
         }
 
-        private void RemoveBurger(object sender, RoutedEventArgs e)
+        private void AddDrink(object sender, RoutedEventArgs e)
+        {
+            edit = false;
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceEditAddDrink(sender, e);
+        }
+
+        private void EditDrink(object sender, RoutedEventArgs e)
+        {
+            edit = true;
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceEditAddDrink(sender, e);
+        }
+
+        private void RemoveDrink(object sender, RoutedEventArgs e)
         {
             AskIdWindow askIdWindow = new AskIdWindow();
             bool? result = askIdWindow.ShowDialog();
@@ -51,25 +66,12 @@ namespace Adminn
                 int id = int.Parse(idString);
                 Conteneur.Instance.SupprimerArticleById(id);
                 var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceBurger(sender, e);
+                mainWindow.GoForInterfaceDrinks(sender, e);
             }
             else
             {
                 MessageBox.Show("ID non fourni.");
             }
-        }
-
-        private void AddNewBurger(object sender, RoutedEventArgs e)
-        {
-            InterfaceBurgers.edit = false;
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
-        }
-
-        private void InterfaceBurgerToDrinks(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceDrinks(sender, e);
         }
     }
 }
