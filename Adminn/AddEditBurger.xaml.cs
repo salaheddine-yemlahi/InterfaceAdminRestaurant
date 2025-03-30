@@ -59,5 +59,10 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceBurger(sender, e);
         }
+
+        private void InterfaceBurgerToDrinks(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

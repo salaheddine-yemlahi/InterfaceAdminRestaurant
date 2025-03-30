@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,33 +13,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InterfaceAdminRestaurant;
-using Microsoft.VisualBasic;
 
 namespace Adminn
 {
-    public partial class InterfaceBurgers : Page
+    public partial class InterfaceFrites : Page
     {
-        public static bool edit = false;
-        public InterfaceBurgers()
+        public InterfaceFrites()
         {
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
             BurgersListBox.Items.Clear();
-            foreach (Nouriture burger in articles.OfType<Nouriture>())
+
+            foreach (Frites frites in articles.OfType<Frites>())
             {
-                BurgersListBox.Items.Add(burger);
+                BurgersListBox.Items.Add(frites);
             }
+            InitializeComponent();
         }
 
-        private void EditBurger(object sender, RoutedEventArgs e)
+        private void ToBurger(object sender, RoutedEventArgs e)
         {
-            InterfaceBurgers.edit = true;
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
+            mainWindow.GoForInterfaceBurger(sender, e);
         }
 
-        private void RemoveBurger(object sender, RoutedEventArgs e)
+        private void ToDrink(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceDrinks(sender, e);
+        }
+
+        private void RemoveFrites(object sender, RoutedEventArgs e)
         {
             AskIdWindow askIdWindow = new AskIdWindow();
             bool? result = askIdWindow.ShowDialog();
@@ -59,23 +63,18 @@ namespace Adminn
             }
         }
 
-        private void AddNewBurger(object sender, RoutedEventArgs e)
+        private void EditFrites(object sender, RoutedEventArgs e)
         {
-            InterfaceBurgers.edit = false;
+            InterfaceBurgers.edit = true;
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceAddBurger(sender, e);
         }
 
-        private void InterfaceBurgerToDrinks(object sender, RoutedEventArgs e)
+        private void AddFrites(object sender, RoutedEventArgs e)
         {
+            InterfaceBurgers.edit = false;
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceDrinks(sender, e);
-        }
-
-        private void ToFrites(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceFrites(sender, e);
+            mainWindow.GoForInterfaceEditAddFrites(sender, e);
         }
     }
 }

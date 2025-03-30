@@ -73,5 +73,16 @@ namespace Adminn
                 MessageBox.Show("ID non fourni.");
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ToFrites(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceFrites(sender, e);
+        }
     }
 }
