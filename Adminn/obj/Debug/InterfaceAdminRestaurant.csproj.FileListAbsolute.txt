@@ -130,3 +130,7 @@ C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\De
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceFrites.g.cs
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AddEditFrites.baml
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceFrites.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AddEditMenu.g.cs
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceMenu.g.cs
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\AddEditMenu.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceMenu.baml

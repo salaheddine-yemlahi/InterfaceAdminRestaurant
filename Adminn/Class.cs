@@ -158,17 +158,31 @@ namespace InterfaceAdminRestaurant
     {
         static int compteurMenu = 0;
         public int idMenu { get; set; }
+        public string nomMenu { get; set; }
+        public decimal Prix { get; set; }
+        public string cheminImage { get; set; }
+
         public Nouriture nouriture { get; set; }
         public Boisson boisson { get; set; }
         public Frites frites { get; set; }
         public bool disponibilte { get; set; } = true;
 
-        public Menu(Nouriture nouriture, Boisson boisson, Frites frites, bool disponibilte)
+        public Menu(string nomMenu,Nouriture nouriture, string cheminImage ,Boisson boisson, Frites frites, decimal prix, bool disponibilte)
         {
             if (nouriture == null || boisson == null || frites == null)
                 throw new MenuException("Les trois articles doivent être présents.");
 
             compteurMenu++;
+            this.Prix = prix;
+            this.nomMenu = nomMenu;
+            if (cheminImage[1] == ':')
+            {
+                this.cheminImage = cheminImage;
+            }
+            else
+            {
+                this.cheminImage = "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\" + cheminImage + ".JPG";
+            }
             this.idMenu = compteurMenu;
             this.nouriture = nouriture;
             this.boisson = boisson;

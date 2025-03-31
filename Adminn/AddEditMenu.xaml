@@ -1,0 +1,77 @@
+﻿<Page x:Class="Adminn.AddEditMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Adminn"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditMenu">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="Black"/>
+        <Border Grid.Column="1" Background="White"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="Burgers" Background="White"  Margin="70,18,70,18" Click="InterfaceBurger" />
+            <Button Grid.Row="1" Content="Boissons" Background="White"  Margin="70,18,70,18" Click="InterfaceDrink" />
+            <Button Grid.Row="2" Content="Frites" Background="White"  Margin="70,18,70,18" Click="InterfaceFrites"/>
+            <Button Grid.Row="3" Content="Menus" Background="BlanchedAlmond"  Margin="70,18,70,18" Click="InterfaceMenus" />
+            <Button Grid.Row="4" Content="Commandes" Background="White"  Margin="70,18,70,18"/>
+            <Button Grid.Row="5" Content="Profil" Background="White"  Margin="70,18,70,18"/>
+            <Button Grid.Row="6" Content="Déconnecter" Background="White"  Margin="70,18,70,18"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Nom" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="MenuNameTextBox" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+
+            <Label Content="Prix" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="MenuPriceTextBox" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+
+            <Label Content="Chemin d'image" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="MenuImagePathTextBox" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+
+            <Label Content="Id Burger" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="IdBurger" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+            <Label Content="Id Boisson" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="IdBoisson" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+            <Label Content="Id Frites" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,10,0,0"/>
+            <TextBox x:Name="IdFrites" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0" Background="#FFE1DDDD" Height="29"/>
+
+
+            <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10" Width="523">
+                <CheckBox x:Name="AvibilityCheckBox" Content="✔" Foreground="Green" FontSize="16" FontWeight="Bold" BorderThickness="1" BorderBrush="Gray" Width="20" Height="20" VerticalAlignment="Center" Padding="3" IsChecked="True"/>
+                <Label Content="Disponibilité du Menu" FontSize="16" Foreground="Black" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Button Grid.Row="7" Content="SAVE" Width="100" Height="30" Background="#FF00FF27" Margin="10" VerticalAlignment="Top" Click="SaveNewEditMenu"/>
+        </Grid>
+
+    </Grid>
+</Page>

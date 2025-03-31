@@ -64,7 +64,7 @@ namespace InterfaceAdminRestaurant
             Nouritures.RemoveAll(n => n.NumeroArticle == id);
             Boissons.RemoveAll(b => b.NumeroArticle == id);
             Frites.RemoveAll(f => f.NumeroArticle == id);
-            Article.compteurArticle--;
+
 
 
 
@@ -87,13 +87,13 @@ namespace InterfaceAdminRestaurant
             Orders.RemoveAll(o => o.idOrder == id);
         }
 
-        // ✅ Récupérer un article par ID
-        /*public Article ObtenirArticleParId(int id)
+        //✅ Récupérer un article par ID
+        public Article ObtenirArticleParId(int id)
         {
-            return Nouritures.FirstOrDefault(n => n.NumeroArticle == id)
-                   Boissons.FirstOrDefault(b => b.NumeroArticle == id)
-                   Frites.FirstOrDefault(f => f.NumeroArticle == id);
-        }*/
+            return (Article)Nouritures.FirstOrDefault(n => n.NumeroArticle == id) ??
+                   (Article)Boissons.FirstOrDefault(b => b.NumeroArticle == id) ??
+                   (Article)Frites.FirstOrDefault(f => f.NumeroArticle == id);
+        }
 
 
         public Menu ObtenirMenuParId(int id)

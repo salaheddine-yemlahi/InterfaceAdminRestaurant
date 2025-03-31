@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\App.xaml
-101402107487
+12-1403140489
 
-172008109190
+19-2035896302
 262085993133
-AddEditBurger.xaml;AddEditFrites.xaml;AskIdWindow.xaml;EditAddDrink.xaml;Identification.xaml;Inscription.xaml;InterfaceBurgers.xaml;InterfaceDrinks.xaml;InterfaceFrites.xaml;MainWindow.xaml;
+AddEditBurger.xaml;AddEditFrites.xaml;AddEditMenu.xaml;AskIdWindow.xaml;EditAddDrink.xaml;Identification.xaml;Inscription.xaml;InterfaceBurgers.xaml;InterfaceDrinks.xaml;InterfaceFrites.xaml;InterfaceMenu.xaml;MainWindow.xaml;
 
 False
 

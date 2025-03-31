@@ -98,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddEditMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AskIdWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,6 +130,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -135,6 +143,9 @@
     </Compile>
     <Compile Include="AddEditFrites.xaml.cs">
       <DependentUpon>AddEditFrites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditMenu.xaml.cs">
+      <DependentUpon>AddEditMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -163,6 +174,9 @@
     </Compile>
     <Compile Include="InterfaceFrites.xaml.cs">
       <DependentUpon>InterfaceFrites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceMenu.xaml.cs">
+      <DependentUpon>InterfaceMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

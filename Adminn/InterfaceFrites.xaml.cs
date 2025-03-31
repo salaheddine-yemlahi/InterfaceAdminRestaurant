@@ -76,5 +76,17 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceEditAddFrites(sender, e);
         }
+
+        private void ToFrites(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceFrites(sender, e);
+        }
+
+        private void ToMenus(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceMenus(sender, e);
+        }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,33 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InterfaceAdminRestaurant;
-using Microsoft.VisualBasic;
 
 namespace Adminn
 {
-    public partial class InterfaceBurgers : Page
+    public partial class InterfaceMenu : Page
     {
-        public static bool edit = false;
-        public InterfaceBurgers()
+        public InterfaceMenu()
         {
             InitializeComponent();
             DataContext = this;
-            List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            BurgersListBox.Items.Clear();
-            foreach (Nouriture burger in articles.OfType<Nouriture>())
+            List<InterfaceAdminRestaurant.Menu> menus = Conteneur.Instance.ObtenirTousLesMenus();
+            MenusListBox.Items.Clear();
+            foreach (InterfaceAdminRestaurant.Menu menu in menus)
             {
-                BurgersListBox.Items.Add(burger);
+                MenusListBox.Items.Add(menu);
             }
         }
 
-        private void EditBurger(object sender, RoutedEventArgs e)
-        {
-            InterfaceBurgers.edit = true;
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
-        }
-
-        private void RemoveBurger(object sender, RoutedEventArgs e)
+        private void RemoveMenu(object sender, RoutedEventArgs e)
         {
             AskIdWindow askIdWindow = new AskIdWindow();
             bool? result = askIdWindow.ShowDialog();
@@ -49,9 +39,9 @@ namespace Adminn
             {
                 string idString = askIdWindow.IdValue;
                 int id = int.Parse(idString);
-                Conteneur.Instance.SupprimerArticleById(id);
+                Conteneur.Instance.SupprimerMenuById(id);
                 var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceBurger(sender, e);
+                mainWindow.GoForInterfaceMenus(sender, e);
             }
             else
             {
@@ -59,14 +49,19 @@ namespace Adminn
             }
         }
 
-        private void AddNewBurger(object sender, RoutedEventArgs e)
+        private void AddNewMenu(object sender, RoutedEventArgs e)
         {
-            InterfaceBurgers.edit = false;
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
+            mainWindow.GoForInterfaceAddEditMenu(sender, e);
         }
 
-        private void InterfaceBurgerToDrinks(object sender, RoutedEventArgs e)
+        private void InterfaceMenusToBurgers(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceBurger(sender, e);
+        }
+
+        private void InterfaceMenusToDrinks(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceDrinks(sender, e);
@@ -82,6 +77,25 @@ namespace Adminn
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceMenus(sender, e);
+        }
+
+        private void EditMenu(object sender, RoutedEventArgs e)
+        {
+            AskIdWindow askIdWindow = new AskIdWindow();
+            bool? result = askIdWindow.ShowDialog();
+
+            if (result == true)
+            {
+                string idString = askIdWindow.IdValue;
+                int id = int.Parse(idString);
+                Conteneur.Instance.SupprimerMenuById(id);
+                var mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.GoForInterfaceAddEditMenu(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("ID non fourni.");
+            }
         }
     }
 }
