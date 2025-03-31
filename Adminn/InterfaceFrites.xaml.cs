@@ -54,20 +54,20 @@ namespace Adminn
                 string idString = askIdWindow.IdValue;
                 int id = int.Parse(idString);
                 Conteneur.Instance.SupprimerArticleById(id);
-                var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceBurger(sender, e);
             }
             else
             {
                 MessageBox.Show("ID non fourni.");
             }
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceFrites(sender, e);
         }
 
         private void EditFrites(object sender, RoutedEventArgs e)
         {
             InterfaceBurgers.edit = true;
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceAddBurger(sender, e);
+            mainWindow.GoForInterfaceEditAddFrites(sender, e);
         }
 
         private void AddFrites(object sender, RoutedEventArgs e)

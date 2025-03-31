@@ -21,4 +21,18 @@
     <propretaire>ilyas</propretaire>
     <motDePasse>$2a$11$Z1OmHcFmxbFh42IbS9.TwOqnvHO5ov.wLvVtvZkdVmR58Smfy6CzG</motDePasse>
   </Restaurant>
+  <Restaurant>
+    <nomRestaurant>MOHAMMED</nomRestaurant>
+    <adresse>FBS</adresse>
+    <numeroGSM>133</numeroGSM>
+    <propretaire>mohammed</propretaire>
+    <motDePasse>$2a$11$I4YUBtR0I/WoRbfnzAmdLuwknOhzr2ZxbihGNZjIUoVfVMcS3Xe/i</motDePasse>
+  </Restaurant>
+  <Restaurant>
+    <nomRestaurant>momo</nomRestaurant>
+    <adresse>momo</adresse>
+    <numeroGSM>momo</numeroGSM>
+    <propretaire>momo</propretaire>
+    <motDePasse>$2a$11$YLyzvsqZrPhEZZFpiOfxjef6ZY5LBE9ZZfIRU.yxwd9Jw85SN01ta</motDePasse>
+  </Restaurant>
 </ArrayOfRestaurant>

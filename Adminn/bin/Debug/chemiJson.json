@@ -102,7 +102,16 @@
       "disponibilte": true
     }
   ],
-  "Frites": [],
+  "Frites": [
+    {
+      "Taille": "L",
+      "NumeroArticle": 12,
+      "Nom": "Frites Belges",
+      "Prix": 1.5,
+      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
+      "disponibilte": true
+    }
+  ],
   "Menus": [],
   "Orders": []
 }

@@ -61,7 +61,8 @@
                                         <TextBlock Text="{Binding Nom}" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="0,5"/>
                                         <TextBlock Text="{Binding NumeroArticle}" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="0,5"/>
                                         <TextBlock Text="{Binding Prix, StringFormat='Prix: {0:C}'}" Foreground="Green" FontSize="10" TextAlignment="Center" Margin="0,5"/>
-                                        <TextBlock Text="{Binding Volume, StringFormat='Volume : {0}:ml'}" FontSize="10" TextAlignment="Center" Margin="0,5"/>
+                                        <TextBlock Text="{Binding Taille, StringFormat='Taille : {0}'}" FontSize="10" TextAlignment="Center" Margin="0,5"/>
+                                        <CheckBox Content="Disponible" Foreground="Green" FontSize="12" FontWeight="Bold" BorderThickness="1" BorderBrush="Gray" Width="100" Height="25" VerticalAlignment="Center" Padding="3" IsChecked="{Binding disponibilte}" HorizontalAlignment="Center"/>
                                         <TextBlock FontSize="10" TextAlignment="Center" Foreground="Green" Margin="0,5">
                                             <TextBlock.Style>
                                                 <Style TargetType="TextBlock">
