@@ -88,5 +88,11 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceMenus(sender, e);
         }
+
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceLogin(sender, e);
+        }
     }
 }

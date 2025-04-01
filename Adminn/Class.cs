@@ -42,7 +42,7 @@ namespace InterfaceAdminRestaurant
 
         public override string ToString()
         {
-            return $"{ Nom} - {Prix}€";
+            return $"{Nom} - {Prix}€";
         }
     }
 
@@ -167,7 +167,7 @@ namespace InterfaceAdminRestaurant
         public Frites frites { get; set; }
         public bool disponibilte { get; set; } = true;
 
-        public Menu(string nomMenu,Nouriture nouriture, string cheminImage ,Boisson boisson, Frites frites, decimal prix, bool disponibilte)
+        public Menu(string nomMenu, Nouriture nouriture, string cheminImage, Boisson boisson, Frites frites, decimal prix, bool disponibilte)
         {
             if (nouriture == null || boisson == null || frites == null)
                 throw new MenuException("Les trois articles doivent être présents.");
@@ -273,38 +273,40 @@ namespace InterfaceAdminRestaurant
 
 
 
-   public class Restaurant
-   {
+    public class Restaurant
+    {
         private static string cheminFichier = "xmlRestaurant.xml";
+        public static string currentRestaurant;
+        public static Restaurant CurrentRestaurant;
         public string nomRestaurant { get; set; }
-        public string adresse {  get; set; }
+        public string adresse { get; set; }
         public string numeroGSM { get; set; }
-        public string propretaire {  get; set; }
-        public string motDePasse { get; set; } // il faut ajouter un hashage aprés.
+        public string propretaire { get; set; }
+        public string motDePasse { get; set; }
 
         public Restaurant(string nomRestaurant, string adresse, string numeroGSM, string propretaire, string motDePasse)
         {
-            if( nomRestaurant == null )
+            if (nomRestaurant == null)
             {
                 throw new IdentificationException("le nom doit pas étre null.");
             }
-            this.nomRestaurant= nomRestaurant;
-            if( adresse == null)
+            this.nomRestaurant = nomRestaurant;
+            if (adresse == null)
             {
                 throw new IdentificationException("l'adresse doit pas étre null.");
             }
             this.adresse = adresse;
-            if( numeroGSM == null)
+            if (numeroGSM == null)
             {
                 throw new IdentificationException("le numero doit pas étre null.");
             }
             this.numeroGSM = numeroGSM;
-            if( propretaire == null)
+            if (propretaire == null)
             {
                 throw new IdentificationException("le propriètaire doit pas étre null.");
             }
             this.propretaire = propretaire;
-            if( motDePasse == null)
+            if (motDePasse == null)
             {
                 throw new IdentificationException("le mot de passe doit pas étre null.");
             }
@@ -321,6 +323,7 @@ namespace InterfaceAdminRestaurant
             XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
             using (StreamReader reader = new StreamReader(cheminFichier))
             {
+                Console.WriteLine("yesss");
                 return (List<Restaurant>)serializer.Deserialize(reader);
             }
         }
@@ -332,10 +335,14 @@ namespace InterfaceAdminRestaurant
             {
                 if (restaurant.nomRestaurant == nomRestaurant)
                 {
+                    Console.WriteLine("false");
                     return false;
                 }
             }
-
+            if(this.motDePasse == "" || this.motDePasse == null)
+            {
+                return false;
+            }
             this.motDePasse = Restaurant.HashPassword(this.motDePasse);
 
             restaurants.Add(this);
@@ -351,16 +358,36 @@ namespace InterfaceAdminRestaurant
         public static bool VerifierRestaurant(string nomRestaurant, string motDePasse)
         {
             List<Restaurant> restaurants = ChargerRestaurants();
-            if (restaurants == null)  return false;
+            if (restaurants == null) return false;
             foreach (Restaurant restaurant in restaurants)
             {
-                bool ver = Restaurant.VerifyPassword(motDePasse ,restaurant.motDePasse);
+                bool ver = Restaurant.VerifyPassword(motDePasse, restaurant.motDePasse);
                 if (restaurant.nomRestaurant == nomRestaurant && ver == true)
                 {
+                    Console.WriteLine("yyyyyy");
+                    currentRestaurant = nomRestaurant;
                     return true;
+                }
+                else
+                {
+                    Console.WriteLine("HHHHHHHHHHHHHHH");
                 }
             }
             return false;
+        }
+
+        public static Restaurant ChargerRestaurant()
+        {
+            List<Restaurant> restaurants = ChargerRestaurants();
+            if (restaurants == null) return null;
+            foreach (Restaurant restaurant in restaurants)
+            {
+                if (restaurant.nomRestaurant == currentRestaurant)
+                {
+                    return restaurant;
+                }
+            }
+            return null;
         }
 
         public static string HashPassword(string password)
@@ -371,6 +398,27 @@ namespace InterfaceAdminRestaurant
         public static bool VerifyPassword(string password, string hashedPassword)
         {
             return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+        }
+
+        public static bool EditRestaurant(string restaurant)
+        {
+            List<Restaurant> restaurant1 = ChargerRestaurants();
+            if (restaurant1 == null) return false;
+            foreach (Restaurant restaurant2 in restaurant1)
+            {
+                if (restaurant2.nomRestaurant == restaurant)
+                {
+                    CurrentRestaurant = restaurant2;
+                    restaurant1.Remove(restaurant2);
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
+                    using (StreamWriter writer = new StreamWriter(cheminFichier))
+                    {
+                        serializer.Serialize(writer, restaurant1);
+                    }
+                    return true;
+                }
+            }
+            return false;
         }
 
 

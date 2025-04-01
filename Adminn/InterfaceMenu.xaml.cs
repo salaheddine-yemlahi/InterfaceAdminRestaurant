@@ -97,5 +97,11 @@ namespace Adminn
                 MessageBox.Show("ID non fourni.");
             }
         }
+
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceLogin(sender, e);
+        }
     }
 }
