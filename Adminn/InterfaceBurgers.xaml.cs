@@ -87,13 +87,21 @@ namespace Adminn
         private void LogOut(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceLogin(sender, e);
+            mainWindow.LogOut(sender, e);
         }
 
         private void ToProfil(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceProfil(sender, e);
+        }
+        public void changeDisponibilite(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox && checkBox.DataContext is InterfaceAdminRestaurant.Menu menu)
+            {
+                menu.disponibilte = checkBox.IsChecked ?? false;
+                Conteneur.Instance.SauvegarderJson();
+            }
         }
     }
 }

@@ -64,5 +64,11 @@ namespace Adminn
         {
 
         }
+
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.LogOut(sender, e);
+        }
     }
 }

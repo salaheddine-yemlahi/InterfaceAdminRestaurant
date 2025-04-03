@@ -134,6 +134,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceBurgersClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InterfaceClientMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InterfaceDrinks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +201,12 @@
     </Compile>
     <Compile Include="InterfaceBurgers.xaml.cs">
       <DependentUpon>InterfaceBurgers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceBurgersClients.xaml.cs">
+      <DependentUpon>InterfaceBurgersClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceClientMenu.xaml.cs">
+      <DependentUpon>InterfaceClientMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="InterfaceDrinks.xaml.cs">
       <DependentUpon>InterfaceDrinks.xaml</DependentUpon>

@@ -31,7 +31,7 @@
             <Button Grid.Row="3" Content="Menus" Background="BlanchedAlmond"  Margin="70,18,70,18" Click="InterfaceMenus" />
             <Button Grid.Row="4" Content="Commandes" Background="White"  Margin="70,18,70,18"/>
             <Button Grid.Row="5" Content="Profil" Background="White"  Margin="70,18,70,18"/>
-            <Button Grid.Row="6" Content="Déconnecter" Background="White"  Margin="70,18,70,18"/>
+            <Button Grid.Row="6" Content="Déconnecter" Background="White"  Margin="70,18,70,18" Click="LogOut"/>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

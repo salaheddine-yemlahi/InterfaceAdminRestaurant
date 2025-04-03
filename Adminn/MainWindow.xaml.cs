@@ -92,5 +92,17 @@ namespace InterfaceAdminRestaurant
         {
             MainFrame.Navigate(new InscriptionClient());
         }
+        public void GoForInterfaceMenuClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceClientMenu());
+        }
+        public void GoForInterfaceBurgersClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceBurgersClients());
+        }
+        public void LogOut(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new MainPage());
+        }
     }
 }
