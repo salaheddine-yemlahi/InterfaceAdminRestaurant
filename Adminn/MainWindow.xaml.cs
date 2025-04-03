@@ -21,7 +21,7 @@ namespace InterfaceAdminRestaurant
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Identification());
+            MainFrame.Navigate(new MainPage());
             Conteneur.Instance.ChargerJson();
         }
         ~MainWindow()
@@ -79,6 +79,18 @@ namespace InterfaceAdminRestaurant
         public void GoForInterfaceEditRestaurant(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new EditRestaurant());
+        }
+        public void GoForInterfaceIdentificationRestaurant(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Identification());
+        }
+        public void GoForLoginClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new IdentificationClient());
+        }
+        public void GoForSingInClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InscriptionClient());
         }
     }
 }

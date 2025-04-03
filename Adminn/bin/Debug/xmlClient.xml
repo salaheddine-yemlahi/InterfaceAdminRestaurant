@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Client>
+    <idClient>0</idClient>
+    <nomClient>salah</nomClient>
+    <prenomClient>salah</prenomClient>
+    <adresseClient>ssss</adresseClient>
+    <numeroGSMClient>ssss</numeroGSMClient>
+    <motDePasse>$2a$11$gpYZec6UflZTIx2RUc/I0e.uDObjmw1hSCp4D0fwAT9OBG4ORu/6G</motDePasse>
+  </Client>
+</ArrayOfClient>

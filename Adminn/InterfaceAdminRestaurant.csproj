@@ -118,7 +118,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="IdentificationClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inscription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InscriptionClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InterfaceMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,8 +182,14 @@
     <Compile Include="Identification.xaml.cs">
       <DependentUpon>Identification.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IdentificationClient.xaml.cs">
+      <DependentUpon>IdentificationClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inscription.xaml.cs">
       <DependentUpon>Inscription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InscriptionClient.xaml.cs">
+      <DependentUpon>InscriptionClient.xaml</DependentUpon>
     </Compile>
     <Compile Include="InterfaceBurgers.xaml.cs">
       <DependentUpon>InterfaceBurgers.xaml</DependentUpon>
@@ -184,6 +202,9 @@
     </Compile>
     <Compile Include="InterfaceMenu.xaml.cs">
       <DependentUpon>InterfaceMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

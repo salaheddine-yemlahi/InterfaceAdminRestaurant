@@ -250,21 +250,114 @@ namespace InterfaceAdminRestaurant
 
     public class Client
     {
+        private static string cheminFichier = "xmlClient.xml";
+        public static string currentClient;
+        public static Client CurrentClient;
         public int idClient { get; set; }
         public string nomClient { get; set; }
         public string prenomClient { get; set; }
         public string adresseClient { get; set; }
         public string numeroGSMClient { get; set; }
+        public string motDePasse { get; set; }
 
-        public Client(int idClient, string nomClient, string prenomClient, string adresseClient, string numeroGSMClient)
+
+        public Client(string nomClient, string prenomClient, string adresseClient, string numeroGSMClient, string MDP)
         {
-            this.idClient = idClient;
             this.nomClient = nomClient;
             this.prenomClient = prenomClient;
             this.adresseClient = adresseClient;
             this.numeroGSMClient = numeroGSMClient;
+            this.motDePasse = MDP;
         }
         public Client() { }
+
+        private static List<Client> ChargerClient()
+        {
+            if (!File.Exists(cheminFichier))
+                return new List<Client>();
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>));
+            using (StreamReader reader = new StreamReader(Client.cheminFichier))
+            {
+                return (List<Client>)serializer.Deserialize(reader);
+            }
+        }
+
+        public bool EnregistrerClient()
+        {
+            List<Client> clients = ChargerClient();
+
+            foreach (Client client in clients)
+            {
+                if (client.nomClient == this.nomClient)
+                {
+                    return false;
+                }
+            }
+            if (this.motDePasse == "" || this.motDePasse == null)
+            {
+                return false;
+            }
+            this.motDePasse = Restaurant.HashPassword(this.motDePasse);
+
+            clients.Add(this);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>));
+            using (StreamWriter writer = new StreamWriter(cheminFichier))
+            {
+                serializer.Serialize(writer, clients);
+            }
+            return true;
+        }
+
+
+        public static bool VerifierClient(string nomClient, string motDePasse)
+        {
+            List<Client> clients = ChargerClient();
+            if (clients == null) return false;
+            foreach (Client client in clients)
+            {
+               bool ver = Restaurant.VerifyPassword(motDePasse, client.motDePasse);
+                if (client.nomClient == nomClient && ver == true)
+                {
+                    currentClient = nomClient;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        public static string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        public static bool VerifyPassword(string password, string hashedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+        }
+
+        public static bool EditClient(string nomClient)
+        {
+            List<Client> clients = ChargerClient();
+            if (clients == null) return false;
+            foreach (Client client in clients)
+            {
+                if (client.nomClient == nomClient)
+                {
+                    CurrentClient = client;
+                    clients.Remove(client);
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
+                    using (StreamWriter writer = new StreamWriter(cheminFichier))
+                    {
+                        serializer.Serialize(writer, client);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
     }
