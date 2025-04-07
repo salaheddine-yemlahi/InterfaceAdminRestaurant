@@ -35,5 +35,23 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceBurgersClient(sender, e);
         }
+
+        private void ToDrinks(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfaceDrinkClient(sender, e);
+        }
+
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.LogOut(sender, e);
+        }
+
+        private void Tofrites(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfaceFritesClient(sender, e);
+        }
     }
 }

@@ -104,5 +104,17 @@ namespace InterfaceAdminRestaurant
         {
             MainFrame.Navigate(new MainPage());
         }
+        public void GoToInterfaceMenuClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceClientMenu());
+        }
+        public void GoToInterfaceDrinkClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceClientDrinks());
+        }
+        public void GoToInterfaceFritesClient(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceClientFrites());
+        }
     }
 }

@@ -17,29 +17,29 @@ using InterfaceAdminRestaurant;
 namespace Adminn
 {
     /// <summary>
-    /// Interaction logic for InterfaceBurgersClients.xaml
+    /// Interaction logic for InterfaceClientFrites.xaml
     /// </summary>
-    public partial class InterfaceBurgersClients : Page
+    public partial class InterfaceClientFrites : Page
     {
-        public InterfaceBurgersClients()
+        public InterfaceClientFrites()
         {
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
             BurgersListBox.Items.Clear();
-            foreach (Nouriture burger in articles.OfType<Nouriture>())
+            foreach (Frites frites in articles.OfType<Frites>())
             {
-                if (burger.disponibilte == true)
+                if (frites.disponibilte == true)
                 {
-                    BurgersListBox.Items.Add(burger);
+                    BurgersListBox.Items.Add(frites);
                 }
             }
         }
 
-        private void LogOut(object sender, RoutedEventArgs e)
+        private void ToBurger(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.LogOut(sender, e);
+            mainWindow.GoForInterfaceBurgersClient(sender, e);
         }
 
         private void ToDrinks(object sender, RoutedEventArgs e)
@@ -48,10 +48,10 @@ namespace Adminn
             mainWindow.GoToInterfaceDrinkClient(sender, e);
         }
 
-        private void ToFrites(object sender, RoutedEventArgs e)
+        private void LogOut(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoToInterfaceFritesClient(sender, e);
+            mainWindow.LogOut(sender, e);
         }
 
         private void ToMenu(object sender, RoutedEventArgs e)

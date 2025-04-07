@@ -17,23 +17,29 @@ using InterfaceAdminRestaurant;
 namespace Adminn
 {
     /// <summary>
-    /// Interaction logic for InterfaceBurgersClients.xaml
+    /// Interaction logic for InterfaceClientDrinks.xaml
     /// </summary>
-    public partial class InterfaceBurgersClients : Page
+    public partial class InterfaceClientDrinks : Page
     {
-        public InterfaceBurgersClients()
+        public InterfaceClientDrinks()
         {
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            BurgersListBox.Items.Clear();
-            foreach (Nouriture burger in articles.OfType<Nouriture>())
+            DrinksListBox.Items.Clear();
+            foreach (Boisson boisson in articles.OfType<Boisson>())
             {
-                if (burger.disponibilte == true)
+                if (boisson.disponibilte == true)
                 {
-                    BurgersListBox.Items.Add(burger);
+                    DrinksListBox.Items.Add(boisson);
                 }
             }
+        }
+
+        private void ToBurgers(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceBurgersClient(sender, e);
         }
 
         private void LogOut(object sender, RoutedEventArgs e)
@@ -42,10 +48,10 @@ namespace Adminn
             mainWindow.LogOut(sender, e);
         }
 
-        private void ToDrinks(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoToInterfaceDrinkClient(sender, e);
+            mainWindow.GoForInterfaceMenuClient(sender, e);
         }
 
         private void ToFrites(object sender, RoutedEventArgs e)
@@ -54,7 +60,7 @@ namespace Adminn
             mainWindow.GoToInterfaceFritesClient(sender, e);
         }
 
-        private void ToMenu(object sender, RoutedEventArgs e)
+        private void ToMenus(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceMenuClient(sender, e);

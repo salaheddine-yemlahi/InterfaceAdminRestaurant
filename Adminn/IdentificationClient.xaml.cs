@@ -35,7 +35,7 @@ namespace Adminn
             {
                 MessageBox.Show("accès autoriser, bienvenue encore.");
                 var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceMenuClient(sender, e);
+                mainWindow.GoForInterfaceBurgersClient(sender, e);
             }
             else
             {

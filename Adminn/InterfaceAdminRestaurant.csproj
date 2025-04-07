@@ -138,6 +138,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceClientDrinks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InterfaceClientFrites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InterfaceClientMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +187,7 @@
       <DependentUpon>AskIdWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class.cs" />
+    <Compile Include="ConteeneurOrders.cs" />
     <Compile Include="ConteneurArticles.cs" />
     <Compile Include="EditAddDrink.xaml.cs">
       <DependentUpon>EditAddDrink.xaml</DependentUpon>
@@ -204,6 +213,12 @@
     </Compile>
     <Compile Include="InterfaceBurgersClients.xaml.cs">
       <DependentUpon>InterfaceBurgersClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceClientDrinks.xaml.cs">
+      <DependentUpon>InterfaceClientDrinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceClientFrites.xaml.cs">
+      <DependentUpon>InterfaceClientFrites.xaml</DependentUpon>
     </Compile>
     <Compile Include="InterfaceClientMenu.xaml.cs">
       <DependentUpon>InterfaceClientMenu.xaml</DependentUpon>

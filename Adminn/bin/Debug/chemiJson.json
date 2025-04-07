@@ -7,7 +7,7 @@
       "Nom": "Big Burger",
       "Prix": 7.45,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
-      "disponibilte": false
+      "disponibilte": true
     },
     {
       "Taille": "M",
@@ -16,7 +16,7 @@
       "Nom": "Black Burger",
       "Prix": 8.50,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\black.JPG",
-      "disponibilte": false
+      "disponibilte": true
     },
     {
       "Taille": "M",
