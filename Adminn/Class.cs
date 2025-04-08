@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace InterfaceAdminRestaurant
@@ -210,33 +211,36 @@ namespace InterfaceAdminRestaurant
 
     public class Order
     {
-        static int compteurOrder = 0;
-        public int idOrder { get; set; }
-        public Nouriture nouriture { get; set; }
-        public Boisson boisson { get; set; }
-        public Frites frites { get; set; }
-        public Client client { get; set; }
-        public char etatOrder { get; set; } = 'N'; // N : nouvelle, A : Ancienne.
+        private static int compteurOrder = 0;
 
-        public Order(Nouriture nouriture, Boisson boisson, Frites frites, Client client, char etatOrder)
+        public int idOrder { get; set; }
+        public List<Nouriture> Nouritures { get; set; }
+        public List<Boisson> Boissons { get; set; }
+        public List<Frites> Frites { get; set; }
+        public Client client { get; set; }
+        public char EtatOrder { get; set; } = 'N'; // N : Nouvelle, A : Ancienne
+        public Order() { }
+
+        public Order(List<Nouriture> nouritures, List<Boisson> boissons, List<Frites> frites, Client client, char etatOrder)
         {
-            if (nouriture == null || boisson == null || frites == null)
-                throw new OrderException("Les trois articles doivent être présents.");
+            if ((nouritures == null || nouritures.Count == 0) &&
+                (boissons == null || boissons.Count == 0) &&
+                (frites == null || frites.Count == 0))
+            {
+                throw new OrderException("La commande doit contenir au moins un article.");
+            }
 
             compteurOrder++;
             this.idOrder = compteurOrder;
-            this.nouriture = nouriture;
-            this.boisson = boisson;
-            this.frites = frites;
+            this.Nouritures = nouritures ?? new List<Nouriture>();
+            this.Boissons = boissons ?? new List<Boisson>();
+            this.Frites = frites ?? new List<Frites>();
             this.client = client;
-            this.etatOrder = etatOrder;
-        }
-
-        public string ToString()
-        {
-            return $"ID Commande: {this.idOrder}\n{this.nouriture}\n{this.boisson}\n{this.frites}\nÉtat: {etatOrder}";
+            this.EtatOrder = etatOrder;
         }
     }
+
+
 
 
 
@@ -317,7 +321,7 @@ namespace InterfaceAdminRestaurant
             if (clients == null) return false;
             foreach (Client client in clients)
             {
-               bool ver = Restaurant.VerifyPassword(motDePasse, client.motDePasse);
+                bool ver = Restaurant.VerifyPassword(motDePasse, client.motDePasse);
                 if (client.nomClient == nomClient && ver == true)
                 {
                     currentClient = nomClient;
@@ -432,7 +436,7 @@ namespace InterfaceAdminRestaurant
                     return false;
                 }
             }
-            if(this.motDePasse == "" || this.motDePasse == null)
+            if (this.motDePasse == "" || this.motDePasse == null)
             {
                 return false;
             }
@@ -513,10 +517,5 @@ namespace InterfaceAdminRestaurant
             }
             return false;
         }
-
-
     }
-
-
-
 }

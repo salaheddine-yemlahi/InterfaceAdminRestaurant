@@ -59,5 +59,11 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceMenuClient(sender, e);
         }
+
+        private void ToOrders(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfaceOrders(sender, e);
+        }
     }
 }

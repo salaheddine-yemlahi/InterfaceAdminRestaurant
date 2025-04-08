@@ -116,5 +116,13 @@ namespace InterfaceAdminRestaurant
         {
             MainFrame.Navigate(new InterfaceClientFrites());
         }
+        public void GoToInterfaceOrders(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InterfaceOrders());
+        }
+        public void GoToInterfacePannier(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new InertfacePannier());
+        }
     }
 }

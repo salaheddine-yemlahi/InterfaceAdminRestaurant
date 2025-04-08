@@ -122,6 +122,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InertfacePannier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inscription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +166,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,7 +195,6 @@
       <DependentUpon>AskIdWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class.cs" />
-    <Compile Include="ConteeneurOrders.cs" />
     <Compile Include="ConteneurArticles.cs" />
     <Compile Include="EditAddDrink.xaml.cs">
       <DependentUpon>EditAddDrink.xaml</DependentUpon>
@@ -201,6 +208,9 @@
     </Compile>
     <Compile Include="IdentificationClient.xaml.cs">
       <DependentUpon>IdentificationClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InertfacePannier.xaml.cs">
+      <DependentUpon>InertfacePannier.xaml</DependentUpon>
     </Compile>
     <Compile Include="Inscription.xaml.cs">
       <DependentUpon>Inscription.xaml</DependentUpon>
@@ -231,6 +241,9 @@
     </Compile>
     <Compile Include="InterfaceMenu.xaml.cs">
       <DependentUpon>InterfaceMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceOrders.xaml.cs">
+      <DependentUpon>InterfaceOrders.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

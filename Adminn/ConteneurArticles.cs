@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using Adminn;
 
 namespace InterfaceAdminRestaurant
 {
@@ -17,6 +18,7 @@ namespace InterfaceAdminRestaurant
         public List<Frites> Frites { get; set; } = new List<Frites>();
         public List<Menu> Menus { get; set; } = new List<Menu>();
         public List<Order> Orders { get; set; } = new List<Order>();
+        public Order Pannier { get; set; }
 
         public Conteneur()
         {
@@ -53,12 +55,6 @@ namespace InterfaceAdminRestaurant
         }
 
 
-        public void AjouterOrder(Order order)
-        {
-            Orders.Add(order);
-        }
-
-
         public void SupprimerArticleById(int id)
         {
             Nouritures.RemoveAll(n => n.NumeroArticle == id);
@@ -82,12 +78,6 @@ namespace InterfaceAdminRestaurant
         }
 
 
-        public void SupprimerOrdreById(int id)
-        {
-            Orders.RemoveAll(o => o.idOrder == id);
-        }
-
-        //✅ Récupérer un article par ID
         public Article ObtenirArticleParId(int id)
         {
             return (Article)Nouritures.FirstOrDefault(n => n.NumeroArticle == id) ??
@@ -101,11 +91,6 @@ namespace InterfaceAdminRestaurant
             return Menus.FirstOrDefault(m => m.idMenu == id);
         }
 
-
-        public Order ObtenirOrderParId(int id)
-        {
-            return Orders.FirstOrDefault(o => o.idOrder == id);
-        }
 
 
         public List<Article> ObtenirTousLesArticlesSansMenus()
@@ -175,5 +160,26 @@ namespace InterfaceAdminRestaurant
             }
         }
 
+        public void AjouterOrder(Order order)
+        {
+            Orders.Add(order);
+        }
+
+        public void SupprimerOrdreById(int id)
+        {
+            Orders.RemoveAll(o => o.idOrder == id);
+        }
+
+
+        public Order ObtenirOrderParId(int id)
+        {
+            return Orders.FirstOrDefault(o => o.idOrder == id);
+        }
+
+
+        public List<Order> ObtenirToutesLesCommandes()
+        {
+            return Orders.ToList();
+        }
     }
 }
