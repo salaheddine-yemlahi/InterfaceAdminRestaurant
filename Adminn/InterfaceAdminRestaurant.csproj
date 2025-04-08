@@ -166,6 +166,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InterfaceOrderAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InterfaceOrders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -241,6 +245,9 @@
     </Compile>
     <Compile Include="InterfaceMenu.xaml.cs">
       <DependentUpon>InterfaceMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceOrderAdmin.xaml.cs">
+      <DependentUpon>InterfaceOrderAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="InterfaceOrders.xaml.cs">
       <DependentUpon>InterfaceOrders.xaml</DependentUpon>

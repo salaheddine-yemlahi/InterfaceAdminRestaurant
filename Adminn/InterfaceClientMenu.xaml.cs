@@ -59,5 +59,12 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoToInterfaceOrders(sender, e);
         }
+
+        private void ToPannier(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfacePannier(sender, e);
+        }
+
     }
 }

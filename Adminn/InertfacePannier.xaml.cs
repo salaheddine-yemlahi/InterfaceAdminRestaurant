@@ -48,7 +48,7 @@ namespace Adminn
             mainWindow.GoToInterfaceFritesClient(sender, e);
         }
 
-        private void ToMenus(object sender, RoutedEventArgs e)
+        private void ToMenu(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForInterfaceMenuClient(sender, e);
@@ -150,19 +150,11 @@ namespace Adminn
             PannierListBox.Items.Add(Conteneur.Instance.Pannier);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClearPannier(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ToMenu(object sender, RoutedEventArgs e)
-        {
-
+            Conteneur.Instance.Pannier = null;
+            Conteneur.Instance.Pannier = new Order();
+            PannierListBox.Items.Clear();
         }
     }
 }

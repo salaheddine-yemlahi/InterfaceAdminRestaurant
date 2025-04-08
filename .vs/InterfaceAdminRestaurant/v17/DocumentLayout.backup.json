@@ -3,62 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\inertfacepannier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\inertfacepannier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\inertfacepannier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\inertfacepannier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfacedrinks.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\interfacedrinks.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfaceorders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\interfaceorders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
+          "DockedWidth": 200,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InterfaceDrinks.xaml",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceDrinks.xaml",
-              "RelativeDocumentMoniker": "Adminn\\InterfaceDrinks.xaml",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceDrinks.xaml",
-              "RelativeToolTip": "Adminn\\InterfaceDrinks.xaml",
+              "DocumentIndex": 1,
+              "Title": "InterfaceOrders.xaml",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceOrders.xaml",
+              "RelativeDocumentMoniker": "Adminn\\InterfaceOrders.xaml",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceOrders.xaml",
+              "RelativeToolTip": "Adminn\\InterfaceOrders.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-08T00:46:35.712Z",
+              "WhenOpened": "2025-04-08T10:39:28.447Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InertfacePannier.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml.cs",
-              "RelativeDocumentMoniker": "Adminn\\InertfacePannier.xaml.cs",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml.cs",
-              "RelativeToolTip": "Adminn\\InertfacePannier.xaml.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAowH4AAAAAAAAAAAAAAA==",
+              "Title": "Class.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\Class.cs",
+              "RelativeDocumentMoniker": "Adminn\\Class.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\Class.cs",
+              "RelativeToolTip": "Adminn\\Class.cs",
+              "ViewState": "AgIAAOIBAAAAAAAAAAAIwOMBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T00:07:31.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InertfacePannier.xaml",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml",
-              "RelativeDocumentMoniker": "Adminn\\InertfacePannier.xaml",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml",
-              "RelativeToolTip": "Adminn\\InertfacePannier.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-07T23:34:40.575Z",
+              "WhenOpened": "2025-04-08T10:37:53.515Z",
               "EditorCaption": ""
             }
           ]

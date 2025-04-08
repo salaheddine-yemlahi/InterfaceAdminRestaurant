@@ -211,15 +211,25 @@ namespace InterfaceAdminRestaurant
 
     public class Order
     {
-        private static int compteurOrder = 0;
+        public static int compteurOrder = 1010;
 
         public int idOrder { get; set; }
         public List<Nouriture> Nouritures { get; set; }
         public List<Boisson> Boissons { get; set; }
         public List<Frites> Frites { get; set; }
-        public Client client { get; set; }
+        public Client client { get; set; } = Client.CurrentClient;
         public char EtatOrder { get; set; } = 'N'; // N : Nouvelle, A : Ancienne
-        public Order() { }
+        public Order() 
+        {
+            compteurOrder++;
+            this.idOrder = compteurOrder;
+
+            Nouritures = new List<Nouriture>();
+            Boissons = new List<Boisson>();
+            Frites = new List<Frites>();
+            client = Client.CurrentClient;
+            EtatOrder = 'N';
+        }
 
         public Order(List<Nouriture> nouritures, List<Boisson> boissons, List<Frites> frites, Client client, char etatOrder)
         {
@@ -325,6 +335,7 @@ namespace InterfaceAdminRestaurant
                 if (client.nomClient == nomClient && ver == true)
                 {
                     currentClient = nomClient;
+                    CurrentClient = client;
                     return true;
                 }
             }

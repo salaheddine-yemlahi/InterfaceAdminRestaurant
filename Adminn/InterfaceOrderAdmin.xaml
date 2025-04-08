@@ -1,4 +1,4 @@
-﻿<Page x:Class="Adminn.InterfaceOrders"
+﻿<Page x:Class="Adminn.InterfaceOrderAdmin"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Adminn"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="InterfaceOrders">
+      Title="InterfaceOrderAdmin">
 
     <Grid>
         <Grid>
@@ -28,16 +28,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button Grid.Row="0" Content="Burgers" Background="White" Margin="70,18,70,18" Click="ToBurgers"/>
                 <Button Grid.Row="1" Content="Boissons" Background="White" Margin="70,18,70,18" Click="ToDrinks" />
                 <Button Grid.Row="2" Content="Frites" Background="White" Margin="70,18,70,18" Click="ToFrites"/>
                 <Button Grid.Row="3" Content="Menus" Background="White" Margin="70,18,70,18" Click="ToMenus" />
-                <Button Grid.Row="4" Content="Pannier" Background="White"  Margin="70,18,70,18" Click="ToPannier"/>
-                <Button Grid.Row="5" Content="Commandes" Background="BlanchedAlmond" Margin="70,18,70,18"/>
-                <Button Grid.Row="6" Content="Profil" Background="White" Margin="70,18,70,18"/>
-                <Button Grid.Row="7" Content="Déconnecter" Background="White" Margin="70,18,70,18" Click="LogOut"/>
+                <Button Grid.Row="4" Content="Commandes" Background="BlanchedAlmond" Margin="70,18,70,18"/>
+                <Button Grid.Row="5" Content="Profil" Background="White" Margin="70,18,70,18" Click="ToProfil"/>
+                <Button Grid.Row="6" Content="Déconnecter" Background="White" Margin="70,18,70,18" Click="LogOut"/>
             </Grid>
 
 
@@ -97,8 +95,9 @@
                                     </ItemsControl>
 
                                     <!-- Informations client -->
-                                    <TextBlock Text="{Binding client.Nom}" FontStyle="Italic" FontSize="11" HorizontalAlignment="Right"/>
-                                    <TextBlock Text="{Binding client.Email}" FontSize="10" HorizontalAlignment="Right"/>
+                                    <TextBlock Text="{Binding client.nomClient}" FontStyle="Italic" FontSize="11" HorizontalAlignment="Right"/>
+                                    <TextBlock Text="{Binding client.adresseClient}" FontSize="10" HorizontalAlignment="Right"/>
+                                    <TextBlock Text="{Binding client.numeroGSMClient}" FontSize="10" HorizontalAlignment="Right"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

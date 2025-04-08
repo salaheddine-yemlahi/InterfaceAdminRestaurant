@@ -27,11 +27,11 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Content="Burgers" Background="White"  Margin="70,18,70,18"/>
+                <Button Grid.Row="0" Content="Burgers" Background="White"  Margin="70,18,70,18" Click="ToBurgers"/>
                 <Button Grid.Row="1" Content="Boissons" Background="White"  Margin="70,18,70,18" Click="ToDrinks"/>
                 <Button Grid.Row="2" Content="Frites" Background="White"  Margin="70,18,70,18" Click="ToFrites"/>
                 <Button Grid.Row="3" Content="Menus" Background="White"  Margin="70,18,70,18" Click="ToMenu"/>
-                <Button Grid.Row="4" Content="Panier" Background="BlanchedAlmond"  Margin="70,18,70,18" Click="Button_Click_1"/>
+                <Button Grid.Row="4" Content="Panier" Background="BlanchedAlmond"  Margin="70,18,70,18"/>
                 <Button Grid.Row="5" Content="Commandes" Background="White"  Margin="70,18,70,18" Click="ToOrders"/>
                 <Button Grid.Row="6" Content="Profil" Background="White"  Margin="70,18,70,18"/>
                 <Button Grid.Row="7" Content="Déconnecter" Background="White"  Margin="70,18,70,18" Click="LogOut"/>
@@ -46,11 +46,19 @@
                     <Button Content="ajouter un article" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="AddItem"/>
                     <Button Content="ajouter un menu" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="AddMenu"/>
                 </StackPanel>
-                <Button Content="Passer la commande" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="PassOrder" Grid.Row="2"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Grid.Row="2">
+                    <Button Content="Passer la commande" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="PassOrder"/>
+                    <Button Content="Vider le pannier" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="ClearPannier"/>
+                </StackPanel>
 
                 <!-- Affichage des commandes -->
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <Grid Grid.Row="1">
                     <ListBox x:Name="PannierListBox" BorderThickness="0" Padding="10" Height="Auto" Width="Auto" MaxHeight="700">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="5" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10" CornerRadius="5">
@@ -107,7 +115,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                </ScrollViewer>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

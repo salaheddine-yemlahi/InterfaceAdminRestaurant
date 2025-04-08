@@ -1,36 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\inertfacepannier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\InterfaceAdminRestaurant.csproj|solutionrelative:adminn\\inertfacepannier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InertfacePannier.xaml",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml",
-              "RelativeDocumentMoniker": "Adminn\\InertfacePannier.xaml",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InertfacePannier.xaml",
-              "RelativeToolTip": "Adminn\\InertfacePannier.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-07T23:34:40.575Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

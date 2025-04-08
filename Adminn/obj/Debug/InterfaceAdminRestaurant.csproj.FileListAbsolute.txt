@@ -156,3 +156,5 @@ C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\De
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceOrders.baml
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InertfacePannier.g.cs
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InertfacePannier.baml
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceOrderAdmin.g.cs
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\Debug\InterfaceOrderAdmin.baml

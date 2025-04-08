@@ -17,65 +17,55 @@ using InterfaceAdminRestaurant;
 namespace Adminn
 {
     /// <summary>
-    /// Interaction logic for InterfaceClientDrinks.xaml
+    /// Interaction logic for InterfaceOrderAdmin.xaml
     /// </summary>
-    public partial class InterfaceClientDrinks : Page
+    public partial class InterfaceOrderAdmin : Page
     {
-        public InterfaceClientDrinks()
+        public InterfaceOrderAdmin()
         {
             InitializeComponent();
             DataContext = this;
-            List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            DrinksListBox.Items.Clear();
-            foreach (Boisson boisson in articles.OfType<Boisson>())
+            List<Order> orders = Conteneur.Instance.ObtenirToutesLesCommandes();
+            OrdersListBox.Items.Clear();
+            foreach (Order order in orders)
             {
-                if (boisson.disponibilte == true)
-                {
-                    DrinksListBox.Items.Add(boisson);
-                }
+                OrdersListBox.Items.Add(order);
             }
         }
 
         private void ToBurgers(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceBurgersClient(sender, e);
+            mainWindow.GoForInterfaceBurger(sender, e);
         }
 
-        private void LogOut(object sender, RoutedEventArgs e)
+        private void ToDrinks(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.LogOut(sender, e);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceMenuClient(sender, e);
+            mainWindow.GoForInterfaceDrinks(sender, e);
         }
 
         private void ToFrites(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoToInterfaceFritesClient(sender, e);
+            mainWindow.GoForInterfaceFrites(sender, e);
         }
 
         private void ToMenus(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceMenuClient(sender, e);
+            mainWindow.GoForInterfaceMenus(sender, e);
         }
-
-        private void ToOrders(object sender, RoutedEventArgs e)
+        private void LogOut(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoToInterfaceOrders(sender, e);
+            mainWindow.LogOut(sender, e);
         }
-
-        private void ToPannier(object sender, RoutedEventArgs e)
+        private void ToProfil(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoToInterfacePannier(sender, e);
+            mainWindow.GoForInterfaceProfil(sender, e);
         }
+
     }
 }

@@ -59,5 +59,16 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.LogOut(sender, e);
         }
+
+        private void ToPannier(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfacePannier(sender, e);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

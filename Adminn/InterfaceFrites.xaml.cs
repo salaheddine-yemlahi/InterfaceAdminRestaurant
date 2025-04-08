@@ -102,5 +102,17 @@ namespace Adminn
                 Conteneur.Instance.SauvegarderJson();
             }
         }
+
+        private void ToOrders(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoToInterfaceOrdersAdmin(sender, e);
+        }
+        private void ToProfil(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.GoForInterfaceProfil(sender, e);
+        }
+
     }
 }
