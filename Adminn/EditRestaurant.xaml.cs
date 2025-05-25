@@ -16,9 +16,6 @@ using InterfaceAdminRestaurant;
 
 namespace Adminn
 {
-    /// <summary>
-    /// Interaction logic for EditRestaurant.xaml
-    /// </summary>
     public partial class EditRestaurant : Page
     {
         public EditRestaurant()
