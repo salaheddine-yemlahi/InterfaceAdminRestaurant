@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using InterfaceAdminRestaurant;
+using Microsoft.Win32;
 
 namespace InterfaceAdminRestaurant
 {
@@ -18,7 +19,7 @@ namespace InterfaceAdminRestaurant
         public List<Frites> Frites { get; set; } = new List<Frites>();
         public List<Menu> Menus { get; set; } = new List<Menu>();
         public List<Order> Orders { get; set; } = new List<Order>();
-        public Order Pannier { get; set; }
+        public Order Pannier { get; set; } = new Order();
 
         public Conteneur()
         {
@@ -181,5 +182,8 @@ namespace InterfaceAdminRestaurant
         {
             return Orders.ToList();
         }
+        
+
+        
     }
 }

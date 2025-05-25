@@ -123,3 +123,6 @@ C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\obj\De
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\ClassLibrary.dll
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\ClassLibrary.pdb
 C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\ClassLibrary.dll.config
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\GestionRegistre.dll
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\GestionRegistre.pdb
+C:\Users\salah\Desktop\informatique B2 Q2\InterfaceAdminRestaurant\Adminn\bin\Debug\GestionRegistre.dll.config

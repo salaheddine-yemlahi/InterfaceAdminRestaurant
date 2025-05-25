@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Adminn;
+using GestionRegistre;
 
 namespace InterfaceAdminRestaurant
 {
@@ -23,10 +24,12 @@ namespace InterfaceAdminRestaurant
             InitializeComponent();
             MainFrame.Navigate(new MainPage());
             Conteneur.Instance.ChargerJson();
+            GestionRegistre.GestionRegistre.ChargerPanier();
         }
         ~MainWindow()
         {
             Conteneur.Instance.SauvegarderJson();
+            GestionRegistre.GestionRegistre.SauvegarderPanier();
         }
         public void GoForSigninInterface(object sender, RoutedEventArgs e)
         {

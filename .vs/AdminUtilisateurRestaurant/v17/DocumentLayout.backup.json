@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\editadddrink.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|solutionrelative:adminn\\editadddrink.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|solutionrelative:adminn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{999EFD60-1D51-4403-A09D-AEB3B0BDA490}|InterfaceAdminRestaurant\\ClassLibrary.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\interfaceadminrestaurant\\conteneurarticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{999EFD60-1D51-4403-A09D-AEB3B0BDA490}|InterfaceAdminRestaurant\\ClassLibrary.csproj|solutionrelative:interfaceadminrestaurant\\conteneurarticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F439C0F3-255A-4269-86B6-409C67BB11C1}|GestionRegistre\\GestionRegistre.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\gestionregistre\\gestionregistre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F439C0F3-255A-4269-86B6-409C67BB11C1}|GestionRegistre\\GestionRegistre.csproj|solutionrelative:gestionregistre\\gestionregistre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditAddDrink.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\EditAddDrink.xaml.cs",
-              "RelativeDocumentMoniker": "Adminn\\EditAddDrink.xaml.cs",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\EditAddDrink.xaml.cs",
-              "RelativeToolTip": "Adminn\\EditAddDrink.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwA8AAAAfAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GestionRegistre.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\GestionRegistre\\GestionRegistre.cs",
+              "RelativeDocumentMoniker": "GestionRegistre\\GestionRegistre.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\GestionRegistre\\GestionRegistre.cs",
+              "RelativeToolTip": "GestionRegistre\\GestionRegistre.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwB4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T18:24:13.409Z",
+              "WhenOpened": "2025-05-25T19:05:10.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConteneurArticles.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\InterfaceAdminRestaurant\\ConteneurArticles.cs",
+              "RelativeDocumentMoniker": "InterfaceAdminRestaurant\\ConteneurArticles.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\InterfaceAdminRestaurant\\ConteneurArticles.cs",
+              "RelativeToolTip": "InterfaceAdminRestaurant\\ConteneurArticles.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAALoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:32:36.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Adminn\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Adminn\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:32:04.865Z",
               "EditorCaption": ""
             }
           ]
