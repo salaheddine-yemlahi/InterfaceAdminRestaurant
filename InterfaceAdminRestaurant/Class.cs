@@ -167,6 +167,7 @@ namespace InterfaceAdminRestaurant
         public Nouriture nouriture { get; set; }
         public Boisson boisson { get; set; }
         public Frites frites { get; set; }
+        public char Taille { get; set; }
         public bool disponibilte { get; set; } = true;
 
         public Menu(string nomMenu, Nouriture nouriture, string cheminImage, Boisson boisson, Frites frites, decimal prix, bool disponibilte)
@@ -442,7 +443,7 @@ namespace InterfaceAdminRestaurant
 
             foreach (Restaurant restaurant in restaurants)
             {
-                if (restaurant.nomRestaurant == nomRestaurant)
+                if (restaurant.nomRestaurant == this.nomRestaurant)
                 {
                     Console.WriteLine("false");
                     return false;

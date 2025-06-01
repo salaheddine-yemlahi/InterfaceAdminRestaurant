@@ -23,11 +23,11 @@ namespace Adminn
     {
         public Inscription()
         {
-            InitializeComponent();
+            InitializeComponent(); // c'est pour appeler le fichier xaml.
         }
         private void GoForLogIn(object sender, RoutedEventArgs e)
         {
-            var mainWindow = Application.Current.MainWindow as MainWindow;
+            var mainWindow = Application.Current.MainWindow as MainWindow; // donne la fenetre principale.
             mainWindow.GoForLogInInterface(sender, e);
         }
 

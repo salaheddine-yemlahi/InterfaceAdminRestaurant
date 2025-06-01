@@ -37,8 +37,18 @@
                 <Button Grid.Row="7" Content="Déconnecter" Background="White"  Margin="70,18,70,18" Click="LogOut"/>
 
             </Grid>
+            
+            
             <Grid Grid.Column="1">
-                <ListBox x:Name="BurgersListBox" BorderThickness="0" Height="Auto" MaxHeight="700">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Content="ajouter au pannier" Margin="0,0,20,0" Background="BlanchedAlmond"  VerticalAlignment="Center"  Width="142" Height="23" Click="AddtoPanner"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                <ListBox x:Name="FritesListBox" BorderThickness="0" Height="Auto" MaxHeight="700">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <UniformGrid Columns="5" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
@@ -51,7 +61,6 @@
                                 <StackPanel>
                                     <Image Source="{Binding cheminImage}" Width="120" Height="80" Margin="5" HorizontalAlignment="Center" />
                                     <TextBlock Text="{Binding Nom}" FontWeight="Bold" FontSize="12" TextAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="{Binding NumeroArticle}" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="0,5" HorizontalAlignment="Center"/>
                                     <TextBlock Text="{Binding Prix, StringFormat='Prix: {0:C}'}" Foreground="Green" FontSize="10" TextAlignment="Center" Margin="0,5" HorizontalAlignment="Center"/>
                                     <TextBlock Text="{Binding Taille, StringFormat='Taille : {0}'}" FontSize="10" TextAlignment="Center" Margin="0,5"  HorizontalAlignment="Center"/>
                                 </StackPanel>
@@ -59,6 +68,7 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

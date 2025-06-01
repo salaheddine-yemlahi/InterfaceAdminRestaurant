@@ -77,5 +77,54 @@ namespace Adminn
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoToInterfacePannier(sender, e);
         }
+
+        private void AddtoPanner(object sender, RoutedEventArgs e)
+        {
+            Article article = DrinksListBox.SelectedItem as Boisson;
+            // Vérification si l'article est null
+            if (article == null)
+            {
+                MessageBox.Show("Article non trouvé.");
+                return; // Sortie si l'article n'est pas trouvé
+            }
+
+            // Vérification si le panier est bien initialisé, sinon l'initialiser
+            if (Conteneur.Instance.Pannier == null)
+            {
+                Conteneur.Instance.Pannier = new Order();
+            }
+
+            // Vérification si les collections du panier sont bien initialisées, sinon les initialiser
+            if (Conteneur.Instance.Pannier.Nouritures == null)
+            {
+                Conteneur.Instance.Pannier.Nouritures = new List<Nouriture>();
+            }
+            if (Conteneur.Instance.Pannier.Boissons == null)
+            {
+                Conteneur.Instance.Pannier.Boissons = new List<Boisson>();
+            }
+            if (Conteneur.Instance.Pannier.Frites == null)
+            {
+                Conteneur.Instance.Pannier.Frites = new List<Frites>();
+            }
+
+            // Ajout de l'article dans le panier en fonction de son type
+            if (article is Nouriture nouriture)
+            {
+                Conteneur.Instance.Pannier.Nouritures.Add(nouriture);
+            }
+            else if (article is Boisson boisson)
+            {
+                Conteneur.Instance.Pannier.Boissons.Add(boisson);
+            }
+            else if (article is Frites frites)
+            {
+                Conteneur.Instance.Pannier.Frites.Add(frites);
+            }
+            else
+            {
+                MessageBox.Show("Type d'article inconnu.");
+            }
+        }
     }
 }

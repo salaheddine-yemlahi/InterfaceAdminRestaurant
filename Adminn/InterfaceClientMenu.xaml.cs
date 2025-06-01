@@ -66,5 +66,13 @@ namespace Adminn
             mainWindow.GoToInterfacePannier(sender, e);
         }
 
+        private void AddtoPanner(object sender, RoutedEventArgs e)
+        {
+            InterfaceAdminRestaurant.Menu menu = MenusListBox.SelectedItem as InterfaceAdminRestaurant.Menu;
+            Conteneur.Instance.Pannier.Nouritures.Add(menu.nouriture);
+            Conteneur.Instance.Pannier.Boissons.Add(menu.boisson);
+            Conteneur.Instance.Pannier.Frites.Add(menu.frites);
+
+        }
     }
 }
