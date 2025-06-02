@@ -213,7 +213,7 @@ namespace InterfaceAdminRestaurant
 
     public class Order
     {
-        public static int compteurOrder = 1010;
+        public static int compteurOrder = 1000;
 
         public int idOrder { get; set; }
         public List<Nouriture> Nouritures { get; set; }
@@ -292,10 +292,10 @@ namespace InterfaceAdminRestaurant
             if (!File.Exists(cheminFichier))
                 return new List<Client>();
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>));
-            using (StreamReader reader = new StreamReader(Client.cheminFichier))
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>));  // Crée un objet XmlSerializer capable de transformer du XML en une List<Client>
+            using (StreamReader reader = new StreamReader(Client.cheminFichier)) //  Ouvre le fichier XML situé à l’endroit indiqué par Client.cheminFichier pour lecture.
             {
-                return (List<Client>)serializer.Deserialize(reader);
+                return (List<Client>)serializer.Deserialize(reader); 
             }
         }
 
@@ -318,8 +318,8 @@ namespace InterfaceAdminRestaurant
 
             clients.Add(this);
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>));
-            using (StreamWriter writer = new StreamWriter(cheminFichier))
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Client>)); // Crée un objet XmlSerializer capable de transformer du XML en une List<Client>
+            using (StreamWriter writer = new StreamWriter(cheminFichier))  //  Ouvre le fichier XML situé à l’endroit indiqué par Client.cheminFichier pour ecriture.
             {
                 serializer.Serialize(writer, clients);
             }
@@ -345,12 +345,12 @@ namespace InterfaceAdminRestaurant
         }
 
 
-        public static string HashPassword(string password)
+        public static string HashPassword(string password) // BCrypt.Net.
         {
-            return BCrypt.Net.BCrypt.HashPassword(password);
+            return BCrypt.Net.BCrypt.HashPassword(password); 
         }
 
-        public static bool VerifyPassword(string password, string hashedPassword)
+        public static bool VerifyPassword(string password, string hashedPassword) //BCrypt.Net.
         {
             return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }
@@ -433,7 +433,6 @@ namespace InterfaceAdminRestaurant
             XmlSerializer serializer = new XmlSerializer(typeof(List<Restaurant>));
             using (StreamReader reader = new StreamReader(cheminFichier))
             {
-                Console.WriteLine("yesss");
                 return (List<Restaurant>)serializer.Deserialize(reader);
             }
         }
@@ -445,7 +444,6 @@ namespace InterfaceAdminRestaurant
             {
                 if (restaurant.nomRestaurant == this.nomRestaurant)
                 {
-                    Console.WriteLine("false");
                     return false;
                 }
             }
@@ -474,13 +472,8 @@ namespace InterfaceAdminRestaurant
                 bool ver = Restaurant.VerifyPassword(motDePasse, restaurant.motDePasse);
                 if (restaurant.nomRestaurant == nomRestaurant && ver == true)
                 {
-                    Console.WriteLine("yyyyyy");
                     currentRestaurant = nomRestaurant;
                     return true;
-                }
-                else
-                {
-                    Console.WriteLine("HHHHHHHHHHHHHHH");
                 }
             }
             return false;

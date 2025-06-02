@@ -44,22 +44,13 @@
       "Prix": 12.85,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\lekker.JPG",
       "disponibilte": true
-    },
-    {
-      "Taille": "M",
-      "EstVegetarienne": true,
-      "NumeroArticle": 6,
-      "Nom": "Ultimate",
-      "Prix": 12.25,
-      "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Ultimate.JPG",
-      "disponibilte": true
     }
   ],
   "Boissons": [
     {
       "Volume": 50,
       "EstNonSucree": false,
-      "NumeroArticle": 7,
+      "NumeroArticle": 6,
       "Nom": "cola",
       "Prix": 1.25,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
@@ -68,7 +59,7 @@
     {
       "Volume": 50,
       "EstNonSucree": false,
-      "NumeroArticle": 8,
+      "NumeroArticle": 7,
       "Nom": "Fanta",
       "Prix": 1.45,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Fanta.JPG",
@@ -77,7 +68,7 @@
     {
       "Volume": 45,
       "EstNonSucree": false,
-      "NumeroArticle": 9,
+      "NumeroArticle": 8,
       "Nom": "Hawai",
       "Prix": 1.35,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\hawai.JPG",
@@ -86,7 +77,7 @@
     {
       "Volume": 100,
       "EstNonSucree": false,
-      "NumeroArticle": 10,
+      "NumeroArticle": 9,
       "Nom": "Monster",
       "Prix": 2.5,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Monster.JPG",
@@ -95,7 +86,7 @@
     {
       "Volume": 75,
       "EstNonSucree": false,
-      "NumeroArticle": 11,
+      "NumeroArticle": 10,
       "Nom": "Sprite",
       "Prix": 1.20,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Sprite.JPG",
@@ -105,7 +96,7 @@
   "Frites": [
     {
       "Taille": "L",
-      "NumeroArticle": 12,
+      "NumeroArticle": 11,
       "Nom": "Frites Belges",
       "Prix": 1.5,
       "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
@@ -121,7 +112,7 @@
       "nouriture": {
         "Taille": "L",
         "EstVegetarienne": true,
-        "NumeroArticle": 13,
+        "NumeroArticle": 12,
         "Nom": "Big Burger",
         "Prix": 7.45,
         "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
@@ -130,7 +121,7 @@
       "boisson": {
         "Volume": 50,
         "EstNonSucree": false,
-        "NumeroArticle": 14,
+        "NumeroArticle": 13,
         "Nom": "cola",
         "Prix": 1.25,
         "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
@@ -138,7 +129,7 @@
       },
       "frites": {
         "Taille": "L",
-        "NumeroArticle": 15,
+        "NumeroArticle": 14,
         "Nom": "Frites Belges",
         "Prix": 1.5,
         "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
@@ -155,7 +146,7 @@
         {
           "Taille": "L",
           "EstVegetarienne": true,
-          "NumeroArticle": 16,
+          "NumeroArticle": 15,
           "Nom": "Big Burger",
           "Prix": 7.45,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
@@ -164,10 +155,19 @@
         {
           "Taille": "M",
           "EstVegetarienne": false,
-          "NumeroArticle": 17,
+          "NumeroArticle": 16,
           "Nom": "Black Burger",
           "Prix": 8.50,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\black.JPG",
+          "disponibilte": true
+        },
+        {
+          "Taille": "M",
+          "EstVegetarienne": false,
+          "NumeroArticle": 17,
+          "Nom": "Classic Smashed",
+          "Prix": 11.25,
+          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\ClassicSmashed.JPG",
           "disponibilte": true
         },
         {
@@ -178,22 +178,13 @@
           "Prix": 11.25,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\ClassicSmashed.JPG",
           "disponibilte": true
-        },
-        {
-          "Taille": "M",
-          "EstVegetarienne": false,
-          "NumeroArticle": 19,
-          "Nom": "Classic Smashed",
-          "Prix": 11.25,
-          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\ClassicSmashed.JPG",
-          "disponibilte": true
         }
       ],
       "Boissons": [
         {
           "Volume": 45,
           "EstNonSucree": false,
-          "NumeroArticle": 20,
+          "NumeroArticle": 19,
           "Nom": "Hawai",
           "Prix": 1.35,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\hawai.JPG",
@@ -203,7 +194,7 @@
       "Frites": [
         {
           "Taille": "L",
-          "NumeroArticle": 21,
+          "NumeroArticle": 20,
           "Nom": "Frites Belges",
           "Prix": 1.5,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
@@ -227,7 +218,7 @@
       "Frites": [
         {
           "Taille": "L",
-          "NumeroArticle": 22,
+          "NumeroArticle": 21,
           "Nom": "Frites Belges",
           "Prix": 1.5,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
@@ -250,7 +241,7 @@
         {
           "Taille": "M",
           "EstVegetarienne": false,
-          "NumeroArticle": 23,
+          "NumeroArticle": 22,
           "Nom": "Black Burger",
           "Prix": 8.50,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\black.JPG",
@@ -276,7 +267,7 @@
         {
           "Volume": 50,
           "EstNonSucree": false,
-          "NumeroArticle": 24,
+          "NumeroArticle": 23,
           "Nom": "cola",
           "Prix": 1.25,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
@@ -297,6 +288,15 @@
     {
       "idOrder": 1019,
       "Nouritures": [
+        {
+          "Taille": "L",
+          "EstVegetarienne": true,
+          "NumeroArticle": 24,
+          "Nom": "Big Burger",
+          "Prix": 7.45,
+          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
+          "disponibilte": true
+        },
         {
           "Taille": "L",
           "EstVegetarienne": true,
@@ -323,18 +323,18 @@
           "Prix": 7.45,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
           "disponibilte": true
-        },
-        {
-          "Taille": "L",
-          "EstVegetarienne": true,
-          "NumeroArticle": 28,
-          "Nom": "Big Burger",
-          "Prix": 7.45,
-          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
-          "disponibilte": true
         }
       ],
       "Boissons": [
+        {
+          "Volume": 50,
+          "EstNonSucree": false,
+          "NumeroArticle": 28,
+          "Nom": "cola",
+          "Prix": 1.25,
+          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
+          "disponibilte": true
+        },
         {
           "Volume": 50,
           "EstNonSucree": false,
@@ -348,15 +348,6 @@
           "Volume": 50,
           "EstNonSucree": false,
           "NumeroArticle": 30,
-          "Nom": "cola",
-          "Prix": 1.25,
-          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
-          "disponibilte": true
-        },
-        {
-          "Volume": 50,
-          "EstNonSucree": false,
-          "NumeroArticle": 31,
           "Nom": "Fanta",
           "Prix": 1.45,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Fanta.JPG",
@@ -365,7 +356,7 @@
         {
           "Volume": 50,
           "EstNonSucree": false,
-          "NumeroArticle": 32,
+          "NumeroArticle": 31,
           "Nom": "cola",
           "Prix": 1.25,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\Cola.JPG",
@@ -373,6 +364,14 @@
         }
       ],
       "Frites": [
+        {
+          "Taille": "L",
+          "NumeroArticle": 32,
+          "Nom": "Frites Belges",
+          "Prix": 1.5,
+          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
+          "disponibilte": true
+        },
         {
           "Taille": "L",
           "NumeroArticle": 33,
@@ -396,14 +395,6 @@
           "Prix": 1.5,
           "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
           "disponibilte": true
-        },
-        {
-          "Taille": "L",
-          "NumeroArticle": 36,
-          "Nom": "Frites Belges",
-          "Prix": 1.5,
-          "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\FritesBelge.JPG",
-          "disponibilte": true
         }
       ],
       "client": {
@@ -419,7 +410,17 @@
   ],
   "Pannier": {
     "idOrder": 1019,
-    "Nouritures": [],
+    "Nouritures": [
+      {
+        "Taille": "L",
+        "EstVegetarienne": true,
+        "NumeroArticle": 37,
+        "Nom": "Big Burger",
+        "Prix": 7.45,
+        "cheminImage": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\images\\BigBurger.JPG",
+        "disponibilte": true
+      }
+    ],
     "Boissons": [],
     "Frites": [],
     "client": {

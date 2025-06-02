@@ -104,8 +104,7 @@ namespace InterfaceAdminRestaurant
 
         public List<Menu> ObtenirTousLesMenus()
         {
-            Console.WriteLine("Appel de ObtenirTousLesMenus, Nombre de menus : " + Menus.Count);
-            return Menus.ToList();
+            return Menus;
         }
 
 
@@ -123,7 +122,7 @@ namespace InterfaceAdminRestaurant
         {
             try
             {
-                string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+                string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true }); // treu: veut dire mettre le code json lisible.
                 File.WriteAllText(cheminJSon, json);
             }
             catch (Exception e)

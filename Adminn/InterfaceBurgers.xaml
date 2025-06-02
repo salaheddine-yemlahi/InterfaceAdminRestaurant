@@ -55,7 +55,7 @@
 
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Border BorderBrush="Gray" MaxWidth="150" MaxHeight="250" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                                <Border BorderBrush="Gray" MaxWidth="150" MaxHeight="250" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Center">
                                     <StackPanel>
                                         <Image Source="{Binding cheminImage}" Width="120" Height="80" Margin="5" HorizontalAlignment="Center" />
                                         <TextBlock Text="{Binding Nom}" FontWeight="Bold" FontSize="12" TextAlignment="Center" HorizontalAlignment="Center"/>

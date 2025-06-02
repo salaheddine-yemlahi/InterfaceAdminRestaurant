@@ -23,11 +23,11 @@ namespace Adminn
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            BurgersListBox.Items.Clear();
+            FritesListBox.Items.Clear();
 
             foreach (Frites frites in articles.OfType<Frites>())
             {
-                BurgersListBox.Items.Add(frites);
+                FritesListBox.Items.Add(frites);
             }
             InitializeComponent();
         }
@@ -46,21 +46,18 @@ namespace Adminn
 
         private void RemoveFrites(object sender, RoutedEventArgs e)
         {
-            AskIdWindow askIdWindow = new AskIdWindow();
-            bool? result = askIdWindow.ShowDialog();
-
-            if (result == true)
+            Article article = FritesListBox.SelectedItem as Article;
+            if (article != null)
             {
-                string idString = askIdWindow.IdValue;
-                int id = int.Parse(idString);
+                int id = article.NumeroArticle;
                 Conteneur.Instance.SupprimerArticleById(id);
+                var mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.GoForInterfaceBurger(sender, e);
             }
             else
             {
-                MessageBox.Show("ID non fourni.");
+                MessageBox.Show("Aucun article sélectionné.");
             }
-            var mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.GoForInterfaceFrites(sender, e);
         }
 
         private void EditFrites(object sender, RoutedEventArgs e)

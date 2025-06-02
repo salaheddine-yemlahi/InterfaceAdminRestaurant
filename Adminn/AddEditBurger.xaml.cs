@@ -43,7 +43,7 @@ namespace Adminn
         private void SaveNewEditBurger(object sender, RoutedEventArgs e)
         {
             char size = string.IsNullOrEmpty(BurgerSizeTextBox.Text) ? 'M' : BurgerSizeTextBox.Text[0];
-            if (!decimal.TryParse(BurgerPriceTextBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal price))
+            if (!decimal.TryParse(BurgerPriceTextBox.Text, out decimal price))
             {
                 MessageBox.Show("Le prix saisi est invalide.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;

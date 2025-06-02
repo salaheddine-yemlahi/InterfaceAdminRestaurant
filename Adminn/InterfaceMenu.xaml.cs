@@ -32,20 +32,17 @@ namespace Adminn
 
         private void RemoveMenu(object sender, RoutedEventArgs e)
         {
-            AskIdWindow askIdWindow = new AskIdWindow();
-            bool? result = askIdWindow.ShowDialog();
-
-            if (result == true)
+            InterfaceAdminRestaurant.Menu menu = MenusListBox.SelectedItem as InterfaceAdminRestaurant.Menu;
+            if (menu != null)
             {
-                string idString = askIdWindow.IdValue;
-                int id = int.Parse(idString);
+                int id = menu.idMenu;
                 Conteneur.Instance.SupprimerMenuById(id);
                 var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceMenus(sender, e);
+                mainWindow.GoForInterfaceBurger(sender, e);
             }
             else
             {
-                MessageBox.Show("ID non fourni.");
+                MessageBox.Show("Aucun article sélectionné.");
             }
         }
 

@@ -16,9 +16,6 @@ using InterfaceAdminRestaurant;
 
 namespace Adminn
 {
-    /// <summary>
-    /// Interaction logic for MainPage.xaml
-    /// </summary>
     public partial class MainPage : Page
     {
         public MainPage()
@@ -32,7 +29,7 @@ namespace Adminn
             mainWindow.GoForInterfaceIdentificationRestaurant(sender, e);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ToClient(object sender, RoutedEventArgs e)
         {
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.GoForLoginClient(sender, e);

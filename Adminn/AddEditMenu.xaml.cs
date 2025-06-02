@@ -29,9 +29,9 @@ namespace Adminn
 
         private void SaveNewEditMenu(object sender, RoutedEventArgs e)
         {
-            if (!decimal.TryParse(MenuPriceTextBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal price))
+            if (!decimal.TryParse(MenuPriceTextBox.Text, out decimal price))
             {
-                MessageBox.Show("Le prix saisi est invalide.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Le prix saisi est invalide.", "Erreur", MessageBoxButton.OK);
                 return;
             }
             int idBurger = int.Parse(IdBurger.Text);

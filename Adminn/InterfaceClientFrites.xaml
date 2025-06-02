@@ -25,7 +25,6 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button Grid.Row="0" Content="Burgers" Background="white"  Margin="70,18,70,18" Click="ToBurger"/>
                 <Button Grid.Row="1" Content="Boissons" Background="White"  Margin="70,18,70,18" Click="ToDrinks"/>
@@ -33,7 +32,6 @@
                 <Button Grid.Row="3" Content="Menus" Background="White"  Margin="70,18,70,18" Click="ToMenu"/>
                 <Button Grid.Row="4" Content="Pannier" Background="White"  Margin="70,18,70,18" Click="ToPannier"/>
                 <Button Grid.Row="5" Content="Commandes" Background="White"  Margin="70,18,70,18" Click="ToOrders"/>
-                <Button Grid.Row="6" Content="Profil" Background="White"  Margin="70,18,70,18"/>
                 <Button Grid.Row="7" Content="Déconnecter" Background="White"  Margin="70,18,70,18" Click="LogOut"/>
 
             </Grid>

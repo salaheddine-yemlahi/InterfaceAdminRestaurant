@@ -27,11 +27,11 @@ namespace Adminn
             InitializeComponent();
             DataContext = this;
             List<Article> articles = Conteneur.Instance.ObtenirTousLesArticlesSansMenus();
-            BurgersListBox.Items.Clear();
+            DrinksListBox.Items.Clear();
 
             foreach (Boisson boisson in articles.OfType<Boisson>()) // Filtre seulement les Boissons
             {
-                BurgersListBox.Items.Add(boisson);
+                DrinksListBox.Items.Add(boisson);
             }
         }
 
@@ -57,20 +57,17 @@ namespace Adminn
 
         private void RemoveDrink(object sender, RoutedEventArgs e)
         {
-            AskIdWindow askIdWindow = new AskIdWindow();
-            bool? result = askIdWindow.ShowDialog();
-
-            if (result == true)
+            Article article = DrinksListBox.SelectedItem as Article;
+            if (article != null)
             {
-                string idString = askIdWindow.IdValue;
-                int id = int.Parse(idString);
+                int id = article.NumeroArticle;
                 Conteneur.Instance.SupprimerArticleById(id);
                 var mainWindow = Application.Current.MainWindow as MainWindow;
-                mainWindow.GoForInterfaceDrinks(sender, e);
+                mainWindow.GoForInterfaceBurger(sender, e);
             }
             else
             {
-                MessageBox.Show("ID non fourni.");
+                MessageBox.Show("Aucun article sélectionné.");
             }
         }
 

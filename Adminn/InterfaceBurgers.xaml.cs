@@ -42,20 +42,17 @@ namespace Adminn
 
         private void RemoveBurger(object sender, RoutedEventArgs e)
         {
-            AskIdWindow askIdWindow = new AskIdWindow();
-            bool? result = askIdWindow.ShowDialog();
 
-            if (result == true)
+            Article article = BurgersListBox.SelectedItem as Article;
+            if (article != null)
             {
-                string idString = askIdWindow.IdValue;
-                int id = int.Parse(idString);
+                int id = article.NumeroArticle;
                 Conteneur.Instance.SupprimerArticleById(id);
                 var mainWindow = Application.Current.MainWindow as MainWindow;
                 mainWindow.GoForInterfaceBurger(sender, e);
             }
-            else
-            {
-                MessageBox.Show("ID non fourni.");
+            else{
+                MessageBox.Show("Aucun article sélectionné.");
             }
         }
 

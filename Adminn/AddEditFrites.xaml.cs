@@ -62,7 +62,7 @@ namespace Adminn
 
         private void SaveNewEditFrites(object sender, RoutedEventArgs e)
         {
-            if (!decimal.TryParse(FritesPriceTextBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal price))
+            if (!decimal.TryParse(FritesPriceTextBox.Text, out decimal price))
             {
                 MessageBox.Show("Le prix saisi est invalide.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;

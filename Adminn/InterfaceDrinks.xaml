@@ -46,7 +46,7 @@
                     <Button Content="Ajouter une boisson" Margin="0,0,20,0" Background="BlanchedAlmond" VerticalAlignment="Center"  Width="142" Height="23" Click="AddDrink"/>
                 </StackPanel>
                 <Grid Grid.Row="1">
-                    <ListBox x:Name="BurgersListBox" BorderThickness="0" Height="Auto" MaxHeight="700" >
+                    <ListBox x:Name="DrinksListBox" BorderThickness="0" Height="Auto" MaxHeight="700" >
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid Columns="5" VerticalAlignment="Top"/>
