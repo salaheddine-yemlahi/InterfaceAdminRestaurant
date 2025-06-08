@@ -76,9 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InterfaceAdminRestaurant\ClassLibrary.csproj">
+    <ProjectReference Include="..\InterfaceAdminRestaurant\Model.csproj">
       <Project>{999efd60-1d51-4403-a09d-aeb3b0bda490}</Project>
-      <Name>ClassLibrary</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\Adminn.csproj|solutionrelative:adminn\\interfaceburgers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\View.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\adminn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A017D74-933C-4012-AA8C-3AD157A7DFE1}|Adminn\\View.csproj|solutionrelative:adminn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F439C0F3-255A-4269-86B6-409C67BB11C1}|GestionRegistre\\GestionRegistre.csproj|c:\\users\\salah\\desktop\\informatique b2 q2\\interfaceadminrestaurant\\gestionregistre\\gestionregistre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F439C0F3-255A-4269-86B6-409C67BB11C1}|GestionRegistre\\GestionRegistre.csproj|solutionrelative:gestionregistre\\gestionregistre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InterfaceBurgers.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
-              "RelativeDocumentMoniker": "Adminn\\InterfaceBurgers.xaml.cs",
-              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\InterfaceBurgers.xaml.cs",
-              "RelativeToolTip": "Adminn\\InterfaceBurgers.xaml.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowFQAAAAJAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Adminn\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\Adminn\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Adminn\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:56:14.348Z",
+              "WhenOpened": "2025-06-03T09:25:58.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionRegistre.cs",
+              "DocumentMoniker": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\GestionRegistre\\GestionRegistre.cs",
+              "RelativeDocumentMoniker": "GestionRegistre\\GestionRegistre.cs",
+              "ToolTip": "C:\\Users\\salah\\Desktop\\informatique B2 Q2\\InterfaceAdminRestaurant\\GestionRegistre\\GestionRegistre.cs",
+              "RelativeToolTip": "GestionRegistre\\GestionRegistre.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwCUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:24:58.703Z",
               "EditorCaption": ""
             }
           ]

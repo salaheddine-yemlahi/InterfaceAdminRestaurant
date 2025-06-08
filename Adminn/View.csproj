@@ -296,9 +296,9 @@
       <Project>{f439c0f3-255a-4269-86b6-409c67bb11c1}</Project>
       <Name>GestionRegistre</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InterfaceAdminRestaurant\ClassLibrary.csproj">
+    <ProjectReference Include="..\InterfaceAdminRestaurant\Model.csproj">
       <Project>{999efd60-1d51-4403-a09d-aeb3b0bda490}</Project>
-      <Name>ClassLibrary</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
